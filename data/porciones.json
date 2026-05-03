@@ -1,0 +1,1058 @@
+[
+  {
+    "id": 1,
+    "porcion": "1 Taza",
+    "tipo": "utensilio",
+    "gramos": 240.0
+  },
+  {
+    "id": 2,
+    "porcion": "1 Cucharon",
+    "tipo": "utensilio",
+    "gramos": 61.0
+  },
+  {
+    "id": 3,
+    "porcion": "1 Cucharada",
+    "tipo": "utensilio",
+    "gramos": 15.0
+  },
+  {
+    "id": 4,
+    "porcion": "1 Cucharadita",
+    "tipo": "utensilio",
+    "gramos": 5.0
+  },
+  {
+    "id": 5,
+    "porcion": "1 Vaso 8 Onz",
+    "tipo": "utensilio",
+    "gramos": 240.0
+  },
+  {
+    "id": 6,
+    "porcion": "1 Libra",
+    "tipo": "utensilio",
+    "gramos": 454.0
+  },
+  {
+    "id": 7,
+    "porcion": "1 Onza",
+    "tipo": "utensilio",
+    "gramos": 30.0
+  },
+  {
+    "id": 8,
+    "porcion": "1 Kilo",
+    "tipo": "utensilio",
+    "gramos": 1000.0
+  },
+  {
+    "id": 9,
+    "porcion": "1 Plato Hondo",
+    "tipo": "utensilio",
+    "gramos": 337.0
+  },
+  {
+    "id": 10,
+    "porcion": "1 Cucharon Sopero",
+    "tipo": "utensilio",
+    "gramos": 120.0
+  },
+  {
+    "id": 11,
+    "porcion": "1 arbolito de brocoli",
+    "tipo": "Alimento",
+    "gramos": 20.0
+  },
+  {
+    "id": 12,
+    "porcion": "1 arbolito de Coliflor",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 13,
+    "porcion": "1 bolsita Galletas saladas",
+    "tipo": "Alimento",
+    "gramos": 24.0
+  },
+  {
+    "id": 14,
+    "porcion": "1 cebolla entera",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 15,
+    "porcion": "1 Chile dulce",
+    "tipo": "Alimento",
+    "gramos": 80.0
+  },
+  {
+    "id": 16,
+    "porcion": "1 cucharon de Espinaca",
+    "tipo": "Alimento",
+    "gramos": 60.0
+  },
+  {
+    "id": 17,
+    "porcion": "1 cucharon de mostaza",
+    "tipo": "Alimento",
+    "gramos": 61.0
+  },
+  {
+    "id": 18,
+    "porcion": "1 Habichuela",
+    "tipo": "Alimento",
+    "gramos": 5.0
+  },
+  {
+    "id": 19,
+    "porcion": "1 hoja de lechuga",
+    "tipo": "Alimento",
+    "gramos": 10.0
+  },
+  {
+    "id": 20,
+    "porcion": "1 jilote",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 21,
+    "porcion": "1 nacatamal",
+    "tipo": "Alimento",
+    "gramos": 170.0
+  },
+  {
+    "id": 22,
+    "porcion": "1 panqueque",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 23,
+    "porcion": "1 Pataste",
+    "tipo": "Alimento",
+    "gramos": 250.0
+  },
+  {
+    "id": 24,
+    "porcion": "1 punada de corn flakes",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 25,
+    "porcion": "1 ramita de culantro",
+    "tipo": "Alimento",
+    "gramos": 5.0
+  },
+  {
+    "id": 26,
+    "porcion": "1 ramita de perejil",
+    "tipo": "Alimento",
+    "gramos": 5.0
+  },
+  {
+    "id": 27,
+    "porcion": "1 rodaja de Cebolla",
+    "tipo": "Alimento",
+    "gramos": 10.0
+  },
+  {
+    "id": 28,
+    "porcion": "1 rodaja de chile dulce",
+    "tipo": "Alimento",
+    "gramos": 10.0
+  },
+  {
+    "id": 29,
+    "porcion": "1 rodaja de tomate",
+    "tipo": "Alimento",
+    "gramos": 10.0
+  },
+  {
+    "id": 30,
+    "porcion": "1 sardina",
+    "tipo": "Alimento",
+    "gramos": 55.0
+  },
+  {
+    "id": 31,
+    "porcion": "1 tamal de elote",
+    "tipo": "Alimento",
+    "gramos": 70.0
+  },
+  {
+    "id": 32,
+    "porcion": "1 taza de corn flakes",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 33,
+    "porcion": "1 taza de repollo",
+    "tipo": "Alimento",
+    "gramos": 70.0
+  },
+  {
+    "id": 34,
+    "porcion": "1 Tomate",
+    "tipo": "Alimento",
+    "gramos": 70.0
+  },
+  {
+    "id": 35,
+    "porcion": "1 Zanahoria",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 36,
+    "porcion": "1/4 libra Yuca (1 pedazo)",
+    "tipo": "Alimento",
+    "gramos": 115.0
+  },
+  {
+    "id": 37,
+    "porcion": "Aguacate grande",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 38,
+    "porcion": "Aguacate pequeño",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 39,
+    "porcion": "Berenjena",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 40,
+    "porcion": "Camote",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 41,
+    "porcion": "Confite",
+    "tipo": "Alimento",
+    "gramos": 5.0
+  },
+  {
+    "id": 42,
+    "porcion": "Consome",
+    "tipo": "Alimento",
+    "gramos": 2.0
+  },
+  {
+    "id": 43,
+    "porcion": "Copetin",
+    "tipo": "Alimento",
+    "gramos": 18.0
+  },
+  {
+    "id": 44,
+    "porcion": "Cubito de pollo",
+    "tipo": "Alimento",
+    "gramos": 1.0
+  },
+  {
+    "id": 45,
+    "porcion": "Diente de ajo",
+    "tipo": "Alimento",
+    "gramos": 5.0
+  },
+  {
+    "id": 46,
+    "porcion": "Elote",
+    "tipo": "Alimento",
+    "gramos": 160.0
+  },
+  {
+    "id": 47,
+    "porcion": "Empanada de carne",
+    "tipo": "Alimento",
+    "gramos": 40.0
+  },
+  {
+    "id": 48,
+    "porcion": "Galleta dulce",
+    "tipo": "Alimento",
+    "gramos": 20.0
+  },
+  {
+    "id": 49,
+    "porcion": "Galletas pizcas chocolate",
+    "tipo": "Alimento",
+    "gramos": 10.0
+  },
+  {
+    "id": 50,
+    "porcion": "Galletas Sorbetos",
+    "tipo": "Alimento",
+    "gramos": 26.0
+  },
+  {
+    "id": 51,
+    "porcion": "Hot Dog",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 52,
+    "porcion": "Huevo",
+    "tipo": "Alimento",
+    "gramos": 52.0
+  },
+  {
+    "id": 53,
+    "porcion": "Jugo de limon",
+    "tipo": "Alimento",
+    "gramos": 14.0
+  },
+  {
+    "id": 54,
+    "porcion": "Margarina (1 barra)",
+    "tipo": "Alimento",
+    "gramos": 90.0
+  },
+  {
+    "id": 55,
+    "porcion": "Mortadela, jamon",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 56,
+    "porcion": "Pan Blanco",
+    "tipo": "Alimento",
+    "gramos": 45.0
+  },
+  {
+    "id": 57,
+    "porcion": "Pan dulce (rosquilla)",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 58,
+    "porcion": "Pan dulce (semita, marque",
+    "tipo": "Alimento",
+    "gramos": 40.0
+  },
+  {
+    "id": 59,
+    "porcion": "Pan dulce(bollito)",
+    "tipo": "Alimento",
+    "gramos": 45.0
+  },
+  {
+    "id": 60,
+    "porcion": "Pan Molde",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 61,
+    "porcion": "Papa",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 62,
+    "porcion": "Pepino",
+    "tipo": "Alimento",
+    "gramos": 200.0
+  },
+  {
+    "id": 63,
+    "porcion": "Pescado",
+    "tipo": "Alimento",
+    "gramos": 252.0
+  },
+  {
+    "id": 64,
+    "porcion": "Platano",
+    "tipo": "Alimento",
+    "gramos": 250.0
+  },
+  {
+    "id": 65,
+    "porcion": "Queso (1 pdzo)",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 66,
+    "porcion": "Queso Kraft",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 67,
+    "porcion": "Rabano",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 68,
+    "porcion": "Rama de apio",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 69,
+    "porcion": "Remolacha",
+    "tipo": "Alimento",
+    "gramos": 100.0
+  },
+  {
+    "id": 70,
+    "porcion": "Salamy",
+    "tipo": "Alimento",
+    "gramos": 20.0
+  },
+  {
+    "id": 71,
+    "porcion": "Tomate manzano",
+    "tipo": "Alimento",
+    "gramos": 180.0
+  },
+  {
+    "id": 72,
+    "porcion": "Tortilla de Harina",
+    "tipo": "Alimento",
+    "gramos": 55.0
+  },
+  {
+    "id": 73,
+    "porcion": "Tortilla de Maiz",
+    "tipo": "Alimento",
+    "gramos": 20.0
+  },
+  {
+    "id": 74,
+    "porcion": "Zapallo",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 75,
+    "porcion": "1 alita de pollo",
+    "tipo": "Alimento",
+    "gramos": 72.0
+  },
+  {
+    "id": 76,
+    "porcion": "1 chuleta de cerdo",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 77,
+    "porcion": "1 muslo de pollo",
+    "tipo": "Alimento",
+    "gramos": 115.0
+  },
+  {
+    "id": 78,
+    "porcion": "1 pierna de pollo",
+    "tipo": "Alimento",
+    "gramos": 110.0
+  },
+  {
+    "id": 79,
+    "porcion": "1/2 pechuga",
+    "tipo": "Alimento",
+    "gramos": 180.0
+  },
+  {
+    "id": 80,
+    "porcion": "Carnes en general (1 pedazo)",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 81,
+    "porcion": "Carnes en general (1 porcion)",
+    "tipo": "Alimento",
+    "gramos": 145.0
+  },
+  {
+    "id": 82,
+    "porcion": "chorizo en barbacoa",
+    "tipo": "Alimento",
+    "gramos": 65.0
+  },
+  {
+    "id": 83,
+    "porcion": "chorizo extremeno",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 84,
+    "porcion": "Higado",
+    "tipo": "Alimento",
+    "gramos": 41.0
+  },
+  {
+    "id": 85,
+    "porcion": "1 charamusca 1/2 taza",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 86,
+    "porcion": "1 juguito",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 87,
+    "porcion": "1 paquetito de galleta rellen",
+    "tipo": "Alimento",
+    "gramos": 25.0
+  },
+  {
+    "id": 88,
+    "porcion": "1 pizca de sal",
+    "tipo": "Alimento",
+    "gramos": 2.5
+  },
+  {
+    "id": 89,
+    "porcion": "banano (unidad)",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 90,
+    "porcion": "churros",
+    "tipo": "Alimento",
+    "gramos": 28.0
+  },
+  {
+    "id": 91,
+    "porcion": "Ciruela o jocote",
+    "tipo": "Alimento",
+    "gramos": 18.0
+  },
+  {
+    "id": 92,
+    "porcion": "ciruela roja (unidad)",
+    "tipo": "Alimento",
+    "gramos": 50.0
+  },
+  {
+    "id": 93,
+    "porcion": "fresa (unidad)",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 94,
+    "porcion": "Guayaba",
+    "tipo": "Alimento",
+    "gramos": 50.0
+  },
+  {
+    "id": 95,
+    "porcion": "guineo verde (unidad)",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 96,
+    "porcion": "kiwi (unidad)",
+    "tipo": "Alimento",
+    "gramos": 80.0
+  },
+  {
+    "id": 97,
+    "porcion": "lichas (10 unidades)",
+    "tipo": "Alimento",
+    "gramos": 200.0
+  },
+  {
+    "id": 98,
+    "porcion": "mandarina (unidad)",
+    "tipo": "Alimento",
+    "gramos": 60.0
+  },
+  {
+    "id": 99,
+    "porcion": "mango jade",
+    "tipo": "Alimento",
+    "gramos": 300.0
+  },
+  {
+    "id": 100,
+    "porcion": "mango pespire",
+    "tipo": "Alimento",
+    "gramos": 90.0
+  },
+  {
+    "id": 101,
+    "porcion": "manzana (unidad)",
+    "tipo": "Alimento",
+    "gramos": 200.0
+  },
+  {
+    "id": 102,
+    "porcion": "maracuya (unidad)",
+    "tipo": "Alimento",
+    "gramos": 125.0
+  },
+  {
+    "id": 103,
+    "porcion": "melocoton",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 104,
+    "porcion": "melon 1 rodaja",
+    "tipo": "Alimento",
+    "gramos": 100.0
+  },
+  {
+    "id": 105,
+    "porcion": "naranja (unidad)",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 106,
+    "porcion": "papaya 1 rodaja",
+    "tipo": "Alimento",
+    "gramos": 185.0
+  },
+  {
+    "id": 107,
+    "porcion": "pera (unidad)",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 108,
+    "porcion": "pie de manzana",
+    "tipo": "Alimento",
+    "gramos": 85.0
+  },
+  {
+    "id": 109,
+    "porcion": "piña 1 rodaja",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 110,
+    "porcion": "sandia 1 rodaja",
+    "tipo": "Alimento",
+    "gramos": 200.0
+  },
+  {
+    "id": 111,
+    "porcion": "toronja (unidad)",
+    "tipo": "Alimento",
+    "gramos": 250.0
+  },
+  {
+    "id": 112,
+    "porcion": "uvas (10 unidades)",
+    "tipo": "Alimento",
+    "gramos": 60.0
+  },
+  {
+    "id": 113,
+    "porcion": "cuchara 1",
+    "tipo": "Utensilio",
+    "gramos": 5.0
+  },
+  {
+    "id": 114,
+    "porcion": "cuchara 2",
+    "tipo": "Utensilio",
+    "gramos": 10.0
+  },
+  {
+    "id": 115,
+    "porcion": "cuchara 3",
+    "tipo": "Utensilio",
+    "gramos": 12.0
+  },
+  {
+    "id": 116,
+    "porcion": "cuchara 4",
+    "tipo": "Utensilio",
+    "gramos": 15.0
+  },
+  {
+    "id": 117,
+    "porcion": "cuchara 5",
+    "tipo": "Utensilio",
+    "gramos": 15.0
+  },
+  {
+    "id": 118,
+    "porcion": "cuchara 6",
+    "tipo": "Utensilio",
+    "gramos": 40.0
+  },
+  {
+    "id": 119,
+    "porcion": "cucharon 1",
+    "tipo": "Utensilio",
+    "gramos": 110.0
+  },
+  {
+    "id": 120,
+    "porcion": "cucharon 2",
+    "tipo": "Utensilio",
+    "gramos": 50.0
+  },
+  {
+    "id": 121,
+    "porcion": "cucharon 3",
+    "tipo": "Utensilio",
+    "gramos": 35.0
+  },
+  {
+    "id": 122,
+    "porcion": "vaso 1",
+    "tipo": "Utensilio",
+    "gramos": 240.0
+  },
+  {
+    "id": 123,
+    "porcion": "vaso 2",
+    "tipo": "Utensilio",
+    "gramos": 320.0
+  },
+  {
+    "id": 124,
+    "porcion": "vaso 3",
+    "tipo": "Utensilio",
+    "gramos": 500.0
+  },
+  {
+    "id": 125,
+    "porcion": "taza1",
+    "tipo": "Utensilio",
+    "gramos": 360.0
+  },
+  {
+    "id": 126,
+    "porcion": "taza2",
+    "tipo": "Utensilio",
+    "gramos": 300.0
+  },
+  {
+    "id": 127,
+    "porcion": "taza3",
+    "tipo": "Utensilio",
+    "gramos": 240.0
+  },
+  {
+    "id": 128,
+    "porcion": "verdura cocida porción grande",
+    "tipo": "Alimento",
+    "gramos": 480.0
+  },
+  {
+    "id": 129,
+    "porcion": "verdura cocida porción mediana",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 130,
+    "porcion": "verdura cocida porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 131,
+    "porcion": "melón picado porción grande",
+    "tipo": "Alimento",
+    "gramos": 480.0
+  },
+  {
+    "id": 132,
+    "porcion": "melón picado porción mediana",
+    "tipo": "Alimento",
+    "gramos": 360.0
+  },
+  {
+    "id": 133,
+    "porcion": "melón picado porción pequeño",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 134,
+    "porcion": "arroz blanco porción pequeña ",
+    "tipo": "Alimento",
+    "gramos": 60.0
+  },
+  {
+    "id": 135,
+    "porcion": "arroz blanco porción mediana",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 136,
+    "porcion": "arroz blanco porción grande",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 137,
+    "porcion": "bolillo (pan blanco) porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 138,
+    "porcion": "bolillo (pan blanco) porción mediana",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 139,
+    "porcion": "bolillo (pan blanco) porción completa",
+    "tipo": "Alimento",
+    "gramos": 45.0
+  },
+  {
+    "id": 140,
+    "porcion": "cereal sabor frutas porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 141,
+    "porcion": "cereal sabor frutas porción mediana",
+    "tipo": "Alimento",
+    "gramos": 360.0
+  },
+  {
+    "id": 142,
+    "porcion": "cereal sabor frutas porción grande",
+    "tipo": "Alimento",
+    "gramos": 480.0
+  },
+  {
+    "id": 143,
+    "porcion": "cereal sin azucar porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 144,
+    "porcion": "cereal sin azucar porción mediana",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 145,
+    "porcion": "cereal sin azucar porción grande ",
+    "tipo": "Alimento",
+    "gramos": 360.0
+  },
+  {
+    "id": 146,
+    "porcion": "Pasta porcion pequeña",
+    "tipo": "Alimento",
+    "gramos": 80.0
+  },
+  {
+    "id": 147,
+    "porcion": "Pasta porcion mediana",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 148,
+    "porcion": "Pasta porcion grande",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 149,
+    "porcion": "tortilla pequeña",
+    "tipo": "Alimento",
+    "gramos": 12.0
+  },
+  {
+    "id": 150,
+    "porcion": "tortilla mediana",
+    "tipo": "Alimento",
+    "gramos": 17.0
+  },
+  {
+    "id": 151,
+    "porcion": "tortilla grande",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 152,
+    "porcion": "papas fritas porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 15.0
+  },
+  {
+    "id": 153,
+    "porcion": "papas fritas porción mediana",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 154,
+    "porcion": "papas fritas porción grande",
+    "tipo": "Alimento",
+    "gramos": 45.0
+  },
+  {
+    "id": 155,
+    "porcion": "pastel porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 28.0
+  },
+  {
+    "id": 156,
+    "porcion": "pastel porción mediana",
+    "tipo": "Alimento",
+    "gramos": 56.0
+  },
+  {
+    "id": 157,
+    "porcion": "pastel porción grande",
+    "tipo": "Alimento",
+    "gramos": 112.0
+  },
+  {
+    "id": 158,
+    "porcion": "frijol cocido porción pequeña ",
+    "tipo": "Alimento",
+    "gramos": 120.0
+  },
+  {
+    "id": 159,
+    "porcion": "frijol cocido porción mediana ",
+    "tipo": "Alimento",
+    "gramos": 180.0
+  },
+  {
+    "id": 160,
+    "porcion": "frijol cocido porción pequeña ",
+    "tipo": "Alimento",
+    "gramos": 240.0
+  },
+  {
+    "id": 161,
+    "porcion": "huevo revuelto porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 45.0
+  },
+  {
+    "id": 162,
+    "porcion": "huevo revuelto porción mediana",
+    "tipo": "Alimento",
+    "gramos": 90.0
+  },
+  {
+    "id": 163,
+    "porcion": "huevo revuelto porción grande",
+    "tipo": "Alimento",
+    "gramos": 135.0
+  },
+  {
+    "id": 164,
+    "porcion": "milanesa de res asada porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 165,
+    "porcion": "milanesa de res asada porción mediana",
+    "tipo": "Alimento",
+    "gramos": 60.0
+  },
+  {
+    "id": 166,
+    "porcion": "milanesa de res asada porción grande",
+    "tipo": "Alimento",
+    "gramos": 90.0
+  },
+  {
+    "id": 167,
+    "porcion": "Carne molida de res porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 168,
+    "porcion": "Carne molida de res porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 80.0
+  },
+  {
+    "id": 169,
+    "porcion": "Carne molida de res porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 150.0
+  },
+  {
+    "id": 170,
+    "porcion": "pechuga de pollo cocida desmenuzada porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 30.0
+  },
+  {
+    "id": 171,
+    "porcion": "pechuga de pollo cocida desmenuzada porción mediana",
+    "tipo": "Alimento",
+    "gramos": 60.0
+  },
+  {
+    "id": 172,
+    "porcion": "pechuga de pollo cocida desmenuzada porción grande",
+    "tipo": "Alimento",
+    "gramos": 90.0
+  },
+  {
+    "id": 173,
+    "porcion": "queso fresco porción pequeña",
+    "tipo": "Alimento",
+    "gramos": 10.0
+  },
+  {
+    "id": 174,
+    "porcion": "queso fresco porción mediana",
+    "tipo": "Alimento",
+    "gramos": 20.0
+  },
+  {
+    "id": 175,
+    "porcion": "queso fresco porción grande",
+    "tipo": "Alimento",
+    "gramos": 40.0
+  },
+  {
+    "id": 176,
+    "porcion": "OBSAN-NINGUNO",
+    "tipo": "OBSAN-NINGUNO",
+    "gramos": 0.0
+  }
+]

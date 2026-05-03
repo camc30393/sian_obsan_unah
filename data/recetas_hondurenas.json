@@ -1,0 +1,764 @@
+[
+  {
+    "id": 1,
+    "nombre": "Baleada sencilla",
+    "descripcion": "Tortilla de harina rellena de frijoles fritos, queso y mantequilla",
+    "porcion_g": 180,
+    "kcal": 380,
+    "ingredientes": [
+      {
+        "alimento": "Tortilla de harina",
+        "gramos": 80
+      },
+      {
+        "alimento": "Frijol rojo refrito",
+        "gramos": 60
+      },
+      {
+        "alimento": "Queso seco rallado",
+        "gramos": 25
+      },
+      {
+        "alimento": "Mantequilla",
+        "gramos": 15
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Baleada con huevo y aguacate",
+    "descripcion": "Variante completa de baleada",
+    "porcion_g": 290,
+    "kcal": 540,
+    "ingredientes": [
+      {
+        "alimento": "Tortilla de harina",
+        "gramos": 80
+      },
+      {
+        "alimento": "Frijol rojo refrito",
+        "gramos": 60
+      },
+      {
+        "alimento": "Queso seco rallado",
+        "gramos": 25
+      },
+      {
+        "alimento": "Mantequilla",
+        "gramos": 15
+      },
+      {
+        "alimento": "Huevo de gallina",
+        "gramos": 60
+      },
+      {
+        "alimento": "Aguacate",
+        "gramos": 50
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Plato típico hondureño",
+    "descripcion": "Carne asada, frijoles, arroz, plátano frito, chismol, queso, tortillas",
+    "porcion_g": 550,
+    "kcal": 920,
+    "ingredientes": [
+      {
+        "alimento": "Carne de res asada",
+        "gramos": 120
+      },
+      {
+        "alimento": "Frijol rojo cocido",
+        "gramos": 90
+      },
+      {
+        "alimento": "Arroz blanco",
+        "gramos": 100
+      },
+      {
+        "alimento": "Plátano maduro frito",
+        "gramos": 90
+      },
+      {
+        "alimento": "Chismol (tomate, cebolla, chile)",
+        "gramos": 50
+      },
+      {
+        "alimento": "Queso seco",
+        "gramos": 30
+      },
+      {
+        "alimento": "Tortilla de maíz",
+        "gramos": 70
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Sopa de mondongo",
+    "descripcion": "Sopa tradicional con panza de res, yuca, plátano, elote y verduras",
+    "porcion_g": 450,
+    "kcal": 380,
+    "ingredientes": [
+      {
+        "alimento": "Mondongo (panza de res)",
+        "gramos": 100
+      },
+      {
+        "alimento": "Yuca",
+        "gramos": 80
+      },
+      {
+        "alimento": "Plátano verde",
+        "gramos": 70
+      },
+      {
+        "alimento": "Elote",
+        "gramos": 60
+      },
+      {
+        "alimento": "Zanahoria",
+        "gramos": 40
+      },
+      {
+        "alimento": "Repollo",
+        "gramos": 50
+      },
+      {
+        "alimento": "Caldo",
+        "gramos": 50
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Tapado olanchano",
+    "descripcion": "Estofado con res, plátano, yuca y verduras",
+    "porcion_g": 480,
+    "kcal": 520,
+    "ingredientes": [
+      {
+        "alimento": "Carne de res",
+        "gramos": 130
+      },
+      {
+        "alimento": "Plátano verde",
+        "gramos": 90
+      },
+      {
+        "alimento": "Yuca",
+        "gramos": 100
+      },
+      {
+        "alimento": "Repollo",
+        "gramos": 60
+      },
+      {
+        "alimento": "Cebolla",
+        "gramos": 30
+      },
+      {
+        "alimento": "Tomate",
+        "gramos": 40
+      },
+      {
+        "alimento": "Caldo",
+        "gramos": 30
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Sopa de caracol",
+    "descripcion": "Plato costeño con caracol, leche de coco y plátano",
+    "porcion_g": 420,
+    "kcal": 460,
+    "ingredientes": [
+      {
+        "alimento": "Caracol",
+        "gramos": 110
+      },
+      {
+        "alimento": "Leche de coco",
+        "gramos": 120
+      },
+      {
+        "alimento": "Plátano verde",
+        "gramos": 80
+      },
+      {
+        "alimento": "Yuca",
+        "gramos": 70
+      },
+      {
+        "alimento": "Cilantro",
+        "gramos": 5
+      },
+      {
+        "alimento": "Cebolla",
+        "gramos": 35
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Pollo con tajadas",
+    "descripcion": "Pollo frito o asado con plátanos verdes fritos en tajadas",
+    "porcion_g": 380,
+    "kcal": 680,
+    "ingredientes": [
+      {
+        "alimento": "Pollo",
+        "gramos": 150
+      },
+      {
+        "alimento": "Plátano verde frito (tajadas)",
+        "gramos": 150
+      },
+      {
+        "alimento": "Repollo aliñado",
+        "gramos": 50
+      },
+      {
+        "alimento": "Salsa",
+        "gramos": 30
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Anafres",
+    "descripcion": "Frijoles refritos derretidos con queso, servido con totopos",
+    "porcion_g": 200,
+    "kcal": 420,
+    "ingredientes": [
+      {
+        "alimento": "Frijol rojo refrito",
+        "gramos": 120
+      },
+      {
+        "alimento": "Queso seco",
+        "gramos": 40
+      },
+      {
+        "alimento": "Totopos de tortilla",
+        "gramos": 40
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Nacatamal hondureño",
+    "descripcion": "Tamal de maíz relleno de cerdo, arroz y verduras envuelto en hoja de plátano",
+    "porcion_g": 350,
+    "kcal": 540,
+    "ingredientes": [
+      {
+        "alimento": "Masa de maíz",
+        "gramos": 180
+      },
+      {
+        "alimento": "Cerdo",
+        "gramos": 80
+      },
+      {
+        "alimento": "Arroz",
+        "gramos": 40
+      },
+      {
+        "alimento": "Papa",
+        "gramos": 30
+      },
+      {
+        "alimento": "Aceituna/pasa",
+        "gramos": 10
+      },
+      {
+        "alimento": "Manteca",
+        "gramos": 10
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Pupusa",
+    "descripcion": "Tortilla gruesa de maíz rellena (frijol/queso/chicharrón)",
+    "porcion_g": 100,
+    "kcal": 230,
+    "ingredientes": [
+      {
+        "alimento": "Masa de maíz",
+        "gramos": 70
+      },
+      {
+        "alimento": "Queso/Frijol",
+        "gramos": 30
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Pinol",
+    "descripcion": "Bebida tradicional de maíz tostado y especias",
+    "porcion_g": 240,
+    "kcal": 130,
+    "ingredientes": [
+      {
+        "alimento": "Maíz tostado molido",
+        "gramos": 30
+      },
+      {
+        "alimento": "Agua/leche",
+        "gramos": 200
+      },
+      {
+        "alimento": "Azúcar",
+        "gramos": 10
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Atol de elote",
+    "descripcion": "Bebida espesa dulce de elote tierno",
+    "porcion_g": 250,
+    "kcal": 200,
+    "ingredientes": [
+      {
+        "alimento": "Elote",
+        "gramos": 100
+      },
+      {
+        "alimento": "Leche",
+        "gramos": 120
+      },
+      {
+        "alimento": "Azúcar",
+        "gramos": 25
+      },
+      {
+        "alimento": "Canela",
+        "gramos": 1
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Montucas",
+    "descripcion": "Tamal dulce de elote tierno con queso",
+    "porcion_g": 200,
+    "kcal": 320,
+    "ingredientes": [
+      {
+        "alimento": "Elote tierno",
+        "gramos": 130
+      },
+      {
+        "alimento": "Queso",
+        "gramos": 30
+      },
+      {
+        "alimento": "Azúcar",
+        "gramos": 15
+      },
+      {
+        "alimento": "Mantequilla",
+        "gramos": 15
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Pastelitos de carne",
+    "descripcion": "Empanadas fritas rellenas de carne molida y arroz",
+    "porcion_g": 80,
+    "kcal": 220,
+    "ingredientes": [
+      {
+        "alimento": "Masa de maíz",
+        "gramos": 50
+      },
+      {
+        "alimento": "Carne molida",
+        "gramos": 20
+      },
+      {
+        "alimento": "Arroz",
+        "gramos": 10
+      },
+      {
+        "alimento": "Aceite (frito)",
+        "gramos": 5
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nombre": "Frijoles parados",
+    "descripcion": "Frijoles rojos cocidos enteros con caldo",
+    "porcion_g": 200,
+    "kcal": 230,
+    "ingredientes": [
+      {
+        "alimento": "Frijol rojo cocido",
+        "gramos": 180
+      },
+      {
+        "alimento": "Cebolla",
+        "gramos": 10
+      },
+      {
+        "alimento": "Aceite",
+        "gramos": 5
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nombre": "Frijoles licuados",
+    "descripcion": "Frijoles cocidos y licuados, con queso opcional",
+    "porcion_g": 180,
+    "kcal": 200,
+    "ingredientes": [
+      {
+        "alimento": "Frijol rojo cocido y licuado",
+        "gramos": 170
+      },
+      {
+        "alimento": "Aceite",
+        "gramos": 8
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nombre": "Arroz con pollo",
+    "descripcion": "Arroz cocido con pollo y verduras",
+    "porcion_g": 350,
+    "kcal": 480,
+    "ingredientes": [
+      {
+        "alimento": "Arroz",
+        "gramos": 150
+      },
+      {
+        "alimento": "Pollo",
+        "gramos": 100
+      },
+      {
+        "alimento": "Zanahoria",
+        "gramos": 30
+      },
+      {
+        "alimento": "Chícharo",
+        "gramos": 30
+      },
+      {
+        "alimento": "Cebolla",
+        "gramos": 20
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nombre": "Catrachas",
+    "descripcion": "Tortilla frita con frijoles refritos y queso rallado",
+    "porcion_g": 90,
+    "kcal": 240,
+    "ingredientes": [
+      {
+        "alimento": "Tortilla de maíz frita",
+        "gramos": 40
+      },
+      {
+        "alimento": "Frijol rojo refrito",
+        "gramos": 35
+      },
+      {
+        "alimento": "Queso seco",
+        "gramos": 15
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nombre": "Enchiladas hondureñas",
+    "descripcion": "Tortilla frita con repollo, carne molida, queso y huevo",
+    "porcion_g": 180,
+    "kcal": 360,
+    "ingredientes": [
+      {
+        "alimento": "Tortilla frita",
+        "gramos": 50
+      },
+      {
+        "alimento": "Carne molida",
+        "gramos": 50
+      },
+      {
+        "alimento": "Repollo",
+        "gramos": 35
+      },
+      {
+        "alimento": "Queso",
+        "gramos": 25
+      },
+      {
+        "alimento": "Huevo cocido",
+        "gramos": 20
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nombre": "Tamal de pollo",
+    "descripcion": "Tamal de masa con pollo y vegetales",
+    "porcion_g": 280,
+    "kcal": 410,
+    "ingredientes": [
+      {
+        "alimento": "Masa de maíz",
+        "gramos": 160
+      },
+      {
+        "alimento": "Pollo",
+        "gramos": 70
+      },
+      {
+        "alimento": "Papa",
+        "gramos": 25
+      },
+      {
+        "alimento": "Manteca",
+        "gramos": 15
+      },
+      {
+        "alimento": "Tomate",
+        "gramos": 10
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "nombre": "Yuca con chicharrón",
+    "descripcion": "Yuca cocida con chicharrón frito y curtido",
+    "porcion_g": 280,
+    "kcal": 460,
+    "ingredientes": [
+      {
+        "alimento": "Yuca cocida",
+        "gramos": 150
+      },
+      {
+        "alimento": "Chicharrón",
+        "gramos": 80
+      },
+      {
+        "alimento": "Curtido (repollo+vinagre)",
+        "gramos": 50
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "nombre": "Café con leche",
+    "descripcion": "Bebida tradicional de café y leche",
+    "porcion_g": 200,
+    "kcal": 100,
+    "ingredientes": [
+      {
+        "alimento": "Café",
+        "gramos": 100
+      },
+      {
+        "alimento": "Leche",
+        "gramos": 100
+      },
+      {
+        "alimento": "Azúcar",
+        "gramos": 10
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nombre": "Pan dulce con café",
+    "descripcion": "Pan dulce típico acompañado de café",
+    "porcion_g": 130,
+    "kcal": 320,
+    "ingredientes": [
+      {
+        "alimento": "Pan dulce",
+        "gramos": 70
+      },
+      {
+        "alimento": "Café con leche",
+        "gramos": 200
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nombre": "Quesadilla hondureña",
+    "descripcion": "Pan dulce horneado con queso y crema",
+    "porcion_g": 100,
+    "kcal": 360,
+    "ingredientes": [
+      {
+        "alimento": "Harina",
+        "gramos": 40
+      },
+      {
+        "alimento": "Queso fresco",
+        "gramos": 30
+      },
+      {
+        "alimento": "Crema",
+        "gramos": 15
+      },
+      {
+        "alimento": "Azúcar",
+        "gramos": 10
+      },
+      {
+        "alimento": "Mantequilla",
+        "gramos": 10
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nombre": "Sopa de frijoles",
+    "descripcion": "Sopa con frijoles, plátano, queso y crema",
+    "porcion_g": 350,
+    "kcal": 320,
+    "ingredientes": [
+      {
+        "alimento": "Frijol rojo cocido",
+        "gramos": 150
+      },
+      {
+        "alimento": "Plátano verde",
+        "gramos": 80
+      },
+      {
+        "alimento": "Queso",
+        "gramos": 25
+      },
+      {
+        "alimento": "Crema",
+        "gramos": 20
+      },
+      {
+        "alimento": "Tortilla",
+        "gramos": 30
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nombre": "Pescado frito con tajadas",
+    "descripcion": "Pescado entero frito con plátano verde frito",
+    "porcion_g": 380,
+    "kcal": 620,
+    "ingredientes": [
+      {
+        "alimento": "Pescado entero frito",
+        "gramos": 180
+      },
+      {
+        "alimento": "Plátano verde frito",
+        "gramos": 130
+      },
+      {
+        "alimento": "Repollo",
+        "gramos": 40
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nombre": "Carne asada con frijoles y tortillas",
+    "descripcion": "Plato sencillo con carne asada",
+    "porcion_g": 380,
+    "kcal": 720,
+    "ingredientes": [
+      {
+        "alimento": "Carne de res asada",
+        "gramos": 150
+      },
+      {
+        "alimento": "Frijol rojo",
+        "gramos": 100
+      },
+      {
+        "alimento": "Tortilla de maíz",
+        "gramos": 80
+      },
+      {
+        "alimento": "Aguacate",
+        "gramos": 40
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nombre": "Tortilla con quesillo",
+    "descripcion": "Tortilla doblada con queso fundido",
+    "porcion_g": 90,
+    "kcal": 240,
+    "ingredientes": [
+      {
+        "alimento": "Tortilla de maíz",
+        "gramos": 50
+      },
+      {
+        "alimento": "Quesillo",
+        "gramos": 35
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nombre": "Avena con leche",
+    "descripcion": "Bebida espesa de avena con leche y canela",
+    "porcion_g": 250,
+    "kcal": 220,
+    "ingredientes": [
+      {
+        "alimento": "Avena cocida",
+        "gramos": 150
+      },
+      {
+        "alimento": "Leche",
+        "gramos": 80
+      },
+      {
+        "alimento": "Azúcar",
+        "gramos": 15
+      },
+      {
+        "alimento": "Canela",
+        "gramos": 1
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nombre": "Rosquillas en miel",
+    "descripcion": "Rosquillas de maíz remojadas en miel de panela",
+    "porcion_g": 100,
+    "kcal": 380,
+    "ingredientes": [
+      {
+        "alimento": "Rosquilla de maíz",
+        "gramos": 60
+      },
+      {
+        "alimento": "Miel de panela",
+        "gramos": 35
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SIDH - Sistema de Información de la Dieta Hondureña. Prototipo no funcional para propuesta DICITH UNAH." />
+  <meta name="author" content="Christian Alexis Manzanares Cruz - ORCID 0009-0004-7419-0449" />
+  <title>SIDH · Sistema de Información de la Dieta Hondureña</title>
+
+  <!-- ========================================================
+       DEPENDENCIAS EXTERNAS (CDN) - sin compilación
+       ======================================================== -->
+
+  <!-- Tipografía Inter (similar a Helvetica Neue del manual UNAH) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS para mapas (pre-carga, se usará en sesión 5) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Tailwind via CDN (no requiere build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tema visual del SIDH -->
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+
+  <!-- React 18 (development build para mejor diagnóstico en prototipo) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel standalone para transformar JSX en el navegador -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Recharts para visualizaciones de datos -->
+  <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+  <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
+
+  <!-- Leaflet JS (para mapas en sesión 5) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Configuración de Tailwind (extensión paleta UNAH) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            unah: {
+              blue:   '#002F87',
+              yellow: '#F4B71A',
+              red:    '#C8102E',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Punto de montaje de React -->
+  <div id="root"></div>
+
+  <!-- ========================================================
+       CARGA DE COMPONENTES SIDH (orden importa)
+       Todos los archivos JSX se transforman en runtime con Babel.
+       ======================================================== -->
+
+  <!-- 1. Utilidades base -->
+  <script src="./js/utils/i18n.js"></script>
+  <script src="./js/utils/store.js"></script>
+  <script src="./js/utils/router.js"></script>
+  <script src="./js/utils/helpers.js"></script>
+
+  <!-- 2. Componentes (necesitan JSX → type=text/babel) -->
+  <script type="text/babel" src="./js/components/Sidebar.js"></script>
+  <script type="text/babel" src="./js/components/Topbar.js"></script>
+  <script type="text/babel" src="./js/components/Footer.js"></script>
+  <script type="text/babel" src="./js/components/Layout.js"></script>
+  <script type="text/babel" src="./js/components/KPI.js"></script>
+  <script type="text/babel" src="./js/components/ChartCard.js"></script>
+  <script type="text/babel" src="./js/components/DataTable.js"></script>
+  <script type="text/babel" src="./js/components/FormStepper.js"></script>
+  <script type="text/babel" src="./js/components/FormField.js"></script>
+  <script type="text/babel" src="./js/components/Modal.js"></script>
+  <script type="text/babel" src="./js/components/PersonPicker.js"></script>
+
+  <!-- 3. Páginas -->
+  <script type="text/babel" src="./js/pages/Login.js"></script>
+  <script type="text/babel" src="./js/pages/Placeholder.js"></script>
+  <script type="text/babel" src="./js/pages/Dashboard.js"></script>
+  <script type="text/babel" src="./js/pages/Encuestados.js"></script>
+  <script type="text/babel" src="./js/pages/BuscarDNI.js"></script>
+  <script type="text/babel" src="./js/pages/Socioeconomico.js"></script>
+  <script type="text/babel" src="./js/pages/Antropometria.js"></script>
+  <script type="text/babel" src="./js/pages/Alimentos.js"></script>
+  <script type="text/babel" src="./js/pages/Recetas.js"></script>
+  <script type="text/babel" src="./js/pages/R24.js"></script>
+  <script type="text/babel" src="./js/pages/Longitudinal.js"></script>
+  <script type="text/babel" src="./js/pages/MapaGeografico.js"></script>
+  <script type="text/babel" src="./js/pages/Reportes.js"></script>
+  <script type="text/babel" src="./js/pages/Cohortes.js"></script>
+  <script type="text/babel" src="./js/pages/Catalogos.js"></script>
+  <script type="text/babel" src="./js/pages/Usuarios.js"></script>
+  <script type="text/babel" src="./js/pages/Auditoria.js"></script>
+  <script type="text/babel" src="./js/pages/Exportar.js"></script>
+
+  <!-- 4. Aplicación principal (último, depende de todo lo anterior) -->
+  <script type="text/babel" src="./js/app.js"></script>
+</body>
+</html>
