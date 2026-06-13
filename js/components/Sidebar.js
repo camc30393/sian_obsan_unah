@@ -1,5 +1,5 @@
 /**
- * SIDH - Sidebar (v1.1)
+ * SIAN - Sidebar (v1.1)
  * Barra lateral fija con navegación, secciones colapsables.
  * Por defecto TODAS las secciones aparecen expandidas (desplegadas).
  * En móviles se convierte en drawer con overlay.

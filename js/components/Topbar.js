@@ -1,5 +1,5 @@
 /**
- * SIDH - Topbar
+ * SIAN - Topbar
  * Barra superior con título dinámico, búsqueda global, toggle idioma y menú usuario.
  */
 const Topbar = ({ title, subtitle, user, onLogout, onMobileMenu }) => {

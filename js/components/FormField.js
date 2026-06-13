@@ -1,5 +1,5 @@
 /**
- * SIDH - FormField
+ * SIAN - FormField
  * Campo de formulario con label, hint, indicador de obligatorio y mensaje de error.
  *
  * Props:

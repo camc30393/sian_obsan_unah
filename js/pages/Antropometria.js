@@ -1,5 +1,5 @@
 /**
- * SIDH - Antropometría
+ * SIAN - Antropometría
  * Captura antropométrica diferenciada según etapa de vida.
  *
  * 7 etapas con campos distintos:
@@ -30,6 +30,7 @@ const Antropometria = () => {
   const [fechaNac, setFechaNac] = React.useState('');
   const [showMNA, setShowMNA] = React.useState(false);
   const [mnaScore, setMnaScore] = React.useState(null);
+  const [mnaResp, setMnaResp] = React.useState({});
 
   const [etapa, setEtapa] = React.useState('Adulto');
   const [data, setData] = React.useState({
@@ -132,6 +133,24 @@ const Antropometria = () => {
     return { txt: 'Riesgo muy aumentado', color: 'var(--unah-red-500)' };
   };
 
+  // MUAC (circunf. braquial) y pantorrilla - cortes de cribado (documentar/validar)
+  const interpretMUAC = (cm, et) => {
+    const c = parseFloat(cm); if (!c) return null;
+    if (et === 'Adulto' || et === 'Adulto mayor') {
+      if (c < 23.5) return { txt: 'Bajo peso (MUAC <23.5)', color: 'var(--unah-red-500)' };
+      if (c < 25)   return { txt: 'Riesgo (MUAC)', color: 'var(--warning-500)' };
+      return { txt: 'Adecuado (MUAC)', color: 'var(--success-500)' };
+    }
+    if (c < 11.5) return { txt: 'Desnutricion aguda severa', color: 'var(--unah-red-700)' };
+    if (c < 12.5) return { txt: 'Desnutricion aguda moderada', color: 'var(--warning-500)' };
+    return { txt: 'Adecuado', color: 'var(--success-500)' };
+  };
+  const interpretPantorrilla = (cm) => {
+    const c = parseFloat(cm); if (!c) return null;
+    return c < 31 ? { txt: 'Baja masa muscular (CP <31)', color: 'var(--unah-red-500)' }
+                  : { txt: 'Adecuada (CP)', color: 'var(--success-500)' };
+  };
+
   // Z-score aproximado para escolares (placeholder - producción usa tablas LMS OMS)
   const zScoreApprox = (imc, edad, sexo) => {
     if (!imc) return null;
@@ -198,6 +217,11 @@ const Antropometria = () => {
               <input className="input" type="number" step="0.1"
                 value={data.perimetroBraquial} onChange={(e) => update('perimetroBraquial', e.target.value)} />
             </FormField>
+            {interpretMUAC(data.perimetroBraquial, etapa) && (
+              <div className="small" style={{ color: interpretMUAC(data.perimetroBraquial, etapa).color, fontWeight:600, marginTop:-6 }}>
+                ↳ {interpretMUAC(data.perimetroBraquial, etapa).txt}
+              </div>
+            )}
           </div>
         );
 
@@ -298,13 +322,18 @@ const Antropometria = () => {
               <input className="input" type="number" step="0.1"
                 value={data.perimetroPantorrilla} onChange={(e) => update('perimetroPantorrilla', e.target.value)} />
             </FormField>
+            {interpretPantorrilla(data.perimetroPantorrilla) && (
+              <div className="small" style={{ color: interpretPantorrilla(data.perimetroPantorrilla).color, fontWeight:600, marginTop:-6 }}>
+                ↳ {interpretPantorrilla(data.perimetroPantorrilla).txt}
+              </div>
+            )}
             <FormField label="MNA (Mini Nutritional Assessment)" hint="Aplicar cuestionario de 18 ítems para tamizaje nutricional en adultos mayores" span={8}>
               <button className="btn btn-secondary btn-sm" type="button" style={{ width: '100%' }}
                 onClick={() => setShowMNA(true)}>
                 📋 Aplicar cuestionario MNA
                 {mnaScore != null && (
-                  <span className="badge badge-green" style={{ marginLeft: 8 }}>
-                    Puntaje: {mnaScore}/30
+                  <span className="badge" style={{ marginLeft: 8, background: mnaScore.color, color:'#fff' }}>
+                    MNA-SF {mnaScore.sf}/14 · {mnaScore.cat}{mnaScore.sfDone && mnaScore.full!=null ? ` · total ${mnaScore.full}/30` : ''}
                   </span>
                 )}
               </button>
@@ -599,14 +628,21 @@ const Antropometria = () => {
         footer={<>
           <button className="btn btn-secondary" onClick={() => setShowMNA(false)}>Cancelar</button>
           <button className="btn btn-primary" onClick={() => {
-            // Simular cálculo: puntaje aleatorio realista 17-28
-            const score = 17 + Math.floor(Math.random() * 12);
-            setMnaScore(score);
+            const sfKeys = ['A','B','C','D','E','F'];
+            const allKeys = sfKeys.concat(['G','H','I','J','K','L','M','N','O','P','Q','R']);
+            const sum = (ks) => ks.reduce((s,k) => s + (mnaResp[k] != null ? mnaResp[k] : 0), 0);
+            const sf = sum(sfKeys);
+            const sfDone = sfKeys.every(k => mnaResp[k] != null);
+            const full = sum(allKeys);
+            // MNA-SF: >=12 normal, 8-11 riesgo, <=7 desnutricion
+            const cat = sf >= 12 ? 'Normal' : (sf >= 8 ? 'Riesgo de desnutricion' : 'Desnutricion');
+            const color = sf >= 12 ? 'var(--success-500)' : (sf >= 8 ? 'var(--warning-500)' : 'var(--unah-red-500)');
+            setMnaScore({ sf, full, sfDone, cat, color });
             setShowMNA(false);
           }}>💾 Calcular y guardar puntaje</button>
         </>}
       >
-        <CuestionarioMNA />
+        <CuestionarioMNA resp={mnaResp} setResp={setMnaResp} />
       </Modal>
     </div>
   );
@@ -615,7 +651,7 @@ const Antropometria = () => {
 // =================================================================
 // Cuestionario MNA (18 ítems agrupados en tamizaje + evaluación)
 // =================================================================
-const CuestionarioMNA = () => {
+const CuestionarioMNA = ({ resp = {}, setResp }) => {
   const tamizaje = [
     { id: 'A', q: '¿Ha disminuido la ingesta de alimentos en los últimos 3 meses por pérdida de apetito, problemas digestivos, dificultades para masticar o tragar?',
       opts: ['0 = anorexia grave', '1 = anorexia moderada', '2 = sin anorexia'] },
@@ -669,7 +705,7 @@ const CuestionarioMNA = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 6 }}>
         {item.opts.map((opt, i) => (
           <label key={i} className="flex items-center gap-2" style={{ fontSize: '0.78rem', cursor: 'pointer' }}>
-            <input type="radio" name={`mna-${item.id}`} />
+            <input type="radio" name={`mna-${item.id}`} checked={resp[item.id] === parseFloat(opt)} onChange={() => setResp(prev => Object.assign({}, prev, { [item.id]: parseFloat(opt) }))} />
             <span>{opt}</span>
           </label>
         ))}

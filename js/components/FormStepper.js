@@ -1,5 +1,5 @@
 /**
- * SIDH - FormStepper
+ * SIAN - FormStepper
  * Indicador visual de pasos para formularios multi-step.
  *
  * Props:

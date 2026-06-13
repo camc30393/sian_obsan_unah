@@ -1,5 +1,5 @@
 /**
- * SIDH - Router
+ * SIAN - Router
  * Routing por hash (#dashboard, #encuestados, etc.) sin dependencias.
  * Permite que el prototipo funcione abriendo el index.html sin servidor.
  */

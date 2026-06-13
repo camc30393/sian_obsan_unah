@@ -1,4 +1,4 @@
-# SIDH · Sistema de Información de la Dieta Hondureña
+# SIAN · Sistema de Información Alimentaria y Nutricional
 
 > **Versión 1.1 — Prototipo no funcional con retroalimentación 1 incorporada**
 > 22 de 22 pantallas · Listo para presentación ante DICITH UNAH
@@ -64,10 +64,10 @@
 
 | Archivo | Descripción |
 |---|---|
-| `SIDH_prototipo_v1.1.zip` | Prototipo completo (todos los archivos) |
-| `MODELO_DATOS_SIDH.docx` | Propuesta de modelo relacional PostgreSQL+PostGIS |
-| `DOCUMENTACION_SIDH.docx` | Documentación general (15 capítulos) |
-| `DICCIONARIO_DATOS_SIDH.xlsx` | Diccionario de variables (11 hojas) |
+| `SIAN_prototipo_v1.1.zip` | Prototipo completo (todos los archivos) |
+| `MODELO_DATOS_SIAN.docx` | Propuesta de modelo relacional PostgreSQL+PostGIS |
+| `DOCUMENTACION_SIAN.docx` | Documentación general (15 capítulos) |
+| `DICCIONARIO_DATOS_SIAN.xlsx` | Diccionario de variables (11 hojas) |
 
 ---
 
@@ -114,15 +114,15 @@ Abrir `http://127.0.0.1:8080/`
 ## Estructura del proyecto
 
 ```
-sidh/
+sian/
 ├── index.html                      Punto de entrada
 ├── servidor.py                     Servidor HTTP local
 ├── iniciar.{bat,sh}                Lanzadores
 ├── README.md                       Este archivo
 ├── INSTALACION.txt                 Guía de instalación
-├── DOCUMENTACION_SIDH.docx         Documento principal (15 capítulos)
-├── DICCIONARIO_DATOS_SIDH.xlsx     Diccionario de datos (11 hojas)
-├── MODELO_DATOS_SIDH.docx          Modelo relacional propuesto (NUEVO v1.1)
+├── DOCUMENTACION_SIAN.docx         Documento principal (15 capítulos)
+├── DICCIONARIO_DATOS_SIAN.xlsx     Diccionario de datos (11 hojas)
+├── MODELO_DATOS_SIAN.docx          Modelo relacional propuesto (NUEVO v1.1)
 │
 ├── assets/css/theme.css            Tema visual UNAH + responsive
 ├── data/                           12 archivos de datos

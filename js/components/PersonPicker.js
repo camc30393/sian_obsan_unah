@@ -1,5 +1,5 @@
 /**
- * SIDH - PersonPicker
+ * SIAN - PersonPicker
  * Componente para seleccionar un encuestado existente (por DNI o nombre)
  * o registrar un padre/tutor para infantes.
  *

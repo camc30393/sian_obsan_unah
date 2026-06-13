@@ -1,5 +1,5 @@
 /**
- * SIDH - Exportar
+ * SIAN - Exportar
  * Configurador de exportación de datos para análisis externo.
  * Permite seleccionar dataset, formato, filtros y opciones (anonimización,
  * incluir diccionario de variables).

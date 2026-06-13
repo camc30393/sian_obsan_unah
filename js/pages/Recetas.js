@@ -1,5 +1,5 @@
 /**
- * SIDH - Recetas hondureñas
+ * SIAN - Recetas hondureñas
  * Catálogo de preparaciones típicas con descomposición en ingredientes.
  *
  * Funcionalidades:

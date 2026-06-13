@@ -1,5 +1,5 @@
 /**
- * SIDH - Dashboard
+ * SIAN - Dashboard
  * Tablero analítico principal con KPIs y visualizaciones core.
  * Cada indicador y gráfico lleva un tooltip explicativo de su significado.
  *

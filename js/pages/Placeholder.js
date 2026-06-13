@@ -1,5 +1,5 @@
 /**
- * SIDH - Placeholder
+ * SIAN - Placeholder
  * Pantalla genérica para módulos aún no construidos.
  * Indica claramente qué se construirá en sesiones siguientes del plan.
  */
@@ -20,7 +20,7 @@ const Placeholder = ({ pageId, title, subtitle, sessionPlan, features }) => {
         <h2 className="h2" style={{ marginBottom: 8 }}>Módulo en construcción</h2>
         <p className="muted" style={{ maxWidth: 560, margin: '0 auto 20px auto' }}>
           Este módulo será desarrollado en la <strong>Sesión {sessionPlan}</strong> del plan
-          de prototipado del SIDH. Forma parte de las 22 pantallas planificadas para el sistema completo.
+          de prototipado del SIAN. Forma parte de las 22 pantallas planificadas para el sistema completo.
         </p>
 
         {features && features.length > 0 && (

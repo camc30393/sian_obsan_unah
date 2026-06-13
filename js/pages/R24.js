@@ -1,5 +1,5 @@
 /**
- * SIDH - R24 (Recordatorio de 24 horas - metodología AMPM-USDA)
+ * SIAN - R24 (Recordatorio de 24 horas - metodología AMPM-USDA)
  *
  * Wizard de 5 pasos:
  *   1. Lista rápida (Quick List) — alimentos sin detalles
@@ -33,6 +33,8 @@ const R24 = () => {
       idAlimento: alimento.id,
       grupoC24: alimento.grupo_c24 || '',
       kcal100: alimento.energia_kcal || alimento.kcal || 0,
+      esReceta: !!alimento.ingredientes,
+      idReceta: alimento.ingredientes ? alimento.id : null,
       hora: opts.hora || '',
       tiempo: opts.tiempo || '',
       cantidad: 1,
@@ -178,6 +180,7 @@ const R24 = () => {
       {step === 3 && <Step4Detalle items={items} updateItem={updateItem} porciones={porciones} t={t} />}
       {step === 4 && <Step5Revision items={items} ddmCount={ddmCount} ddmCumple={ddmCumple}
         gruposConsumidos={gruposConsumidos} totalKcal={totalKcal} tiempos={tiempos} t={t} />}
+      {step === 4 && persona && <AdecuacionR24 items={items} persona={persona} />}
 
       {/* Indicadores en vivo (sticky bottom) */}
       <div style={{
@@ -210,7 +213,11 @@ const R24 = () => {
                 {t('common.next')} →
               </button>
             ) : (
-              <button className="btn btn-yellow" onClick={() => alert(`(Prototipo) R24 guardado\n\nTotal: ${items.length} alimentos\nDDM: ${ddmCount}/10\nKcal: ${Math.round(totalKcal)}`)}>
+              <button className="btn btn-yellow" onClick={() => {
+                const faltan = items.filter(i => !i.porcion);
+                if (faltan.length) { alert(`Falta especificar la porción en ${faltan.length} alimento(s).\nLa porción es OBLIGATORIA antes de guardar el R24 (paso 4 - Detalle).`); return; }
+                alert(`(Prototipo) R24 guardado\n\nTotal: ${items.length} alimentos\nDDM: ${ddmCount}/10\nKcal: ${Math.round(totalKcal)}`);
+              }}>
                 ✓ {t('r24.confirm')}
               </button>
             )}
@@ -717,6 +724,161 @@ const Step5Revision = ({ items, ddmCount, ddmCumple, gruposConsumidos, totalKcal
           ))
         )}
       </div>
+    </div>
+  );
+};
+
+
+// ====================================================================
+// PANEL: Evaluacion de adecuacion de macro y micronutrientes (R24)
+// Marco: docs/marco-teorico-evaluacion-adecuacion-nutricional.md
+// ====================================================================
+const SEM_COLOR = { verde:'#1f9d55', ambar:'#d9930a', rojo:'#c8102e', info:'#64748b' };
+const SEM_BG    = { verde:'#e7f6ec', ambar:'#fdf3e0', rojo:'#fde8eb', info:'#eef2f7' };
+
+const AdecuacionR24 = ({ items, persona }) => {
+  const [estandar, setEstandar] = React.useState('iom');
+  const etapa = Nutricion.mapEtapa(persona);
+  const sexo  = Nutricion.mapSexo(persona);
+  const especial = Nutricion.tieneCondicionEspecial(persona);
+
+  // Antropometria: edad real del encuestado; peso/talla editables (no hay antropometria en proto)
+  const [peso, setPeso]   = React.useState('');
+  const [talla, setTalla] = React.useState('');
+  const [edad, setEdad]   = React.useState(persona.edad || '');
+  const [pal, setPal]     = React.useState('sedentario');
+
+  const opts = {
+    estandar,
+    peso:  peso ? parseFloat(peso) : undefined,
+    talla_cm: talla ? parseFloat(talla) : undefined,
+    edad:  edad ? parseFloat(edad) : undefined,
+    pal
+  };
+  const tot = React.useMemo(() => Nutricion.computeIntake(items), [items]);
+  const ev  = React.useMemo(
+    () => Nutricion.evaluate(tot, etapa, sexo, opts),
+    [tot, etapa, sexo, estandar, peso, talla, edad, pal]
+  );
+
+  const meta = ((DataStore.get('requerimientos') || {})._meta || {});
+  const stdMeta = ((meta.estandares || {})[estandar] || {});
+  const ESTANDARES = [
+    { id:'iom', label:'IOM (DRI)' },
+    { id:'fao_oms', label:'FAO/OMS' },
+    { id:'incap', label:'INCAP' },
+  ];
+
+  return (
+    <div className="card" style={{ marginTop: 16, border:'2px solid var(--unah-blue-800)' }}>
+      <div className="flex items-center justify-between" style={{ flexWrap:'wrap', gap:8 }}>
+        <div className="h3" style={{ margin:0 }}>🍎 Adecuacion de nutrientes</div>
+        <div className="flex gap-1">
+          {ESTANDARES.map(e => (
+            <button key={e.id} onClick={() => setEstandar(e.id)}
+              style={{ padding:'4px 10px', borderRadius:8, fontSize:'.8rem', fontWeight:600,
+                border:`1.5px solid ${estandar===e.id?'var(--unah-blue-800)':'#cbd5e1'}`,
+                background: estandar===e.id?'var(--unah-blue-50, #eef3fb)':'white',
+                color: estandar===e.id?'var(--unah-blue-800)':'#475569', cursor:'pointer' }}>
+              {e.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Antropometria para EER y proteina g/kg */}
+      <div className="flex gap-2" style={{ flexWrap:'wrap', alignItems:'flex-end', margin:'10px 0' }}>
+        {[['Peso (kg)', peso, setPeso, '62'],['Talla (cm)', talla, setTalla, '162'],['Edad (años)', edad, setEdad, '']].map(([lbl,val,set,ph],i)=>(
+          <div key={i}>
+            <div className="muted small" style={{ marginBottom:2 }}>{lbl}</div>
+            <input type="number" value={val} placeholder={ph} onChange={e=>set(e.target.value)}
+              style={{ width:90, padding:'5px 8px', border:'1px solid #cbd5e1', borderRadius:6 }} />
+          </div>
+        ))}
+        <div>
+          <div className="muted small" style={{ marginBottom:2 }}>Actividad</div>
+          <select value={pal} onChange={e=>setPal(e.target.value)}
+            style={{ padding:'5px 8px', border:'1px solid #cbd5e1', borderRadius:6 }}>
+            <option value="sedentario">Sedentario</option>
+            <option value="ligero">Ligero</option>
+            <option value="activo">Activo</option>
+            <option value="muy_activo">Muy activo</option>
+          </select>
+        </div>
+        <div className="muted small" style={{ alignSelf:'center', maxWidth:200 }}>
+          Sin peso/talla se usa antropometría de referencia de la etapa.
+        </div>
+      </div>
+
+      {/* Disclaimer metodologico obligatorio */}
+      <div style={{ background:'#fff8e6', border:'1px solid #f0d48a', borderRadius:8,
+        padding:'8px 12px', margin:'10px 0', fontSize:'.82rem', color:'#7a5b12' }}>
+        ⚠️ <strong>Indicativo de 1 dia</strong> — un solo R24 no es diagnostico de ingesta usual.
+        Aplica a poblacion sana. Etapa: <strong>{etapa || '—'}</strong> · Sexo: <strong>{sexo==='M'?'Hombre':'Mujer'}</strong>.
+      </div>
+
+      {especial && (
+        <div style={{ background:SEM_BG.ambar, border:'1px solid #f0d48a', borderRadius:8,
+          padding:'8px 12px', marginBottom:10, fontSize:'.82rem', color:'#7a5b12' }}>
+          Esta persona tiene condicion especial (<strong>{persona.condicion_especial}</strong>):
+          se usan referencias propias de esa condicion.
+        </div>
+      )}
+
+      {!ev.disponible ? (
+        <div style={{ background:SEM_BG.info, borderRadius:8, padding:'12px',
+          fontSize:'.85rem', color:'#475569' }}>
+          {estandar==='incap'
+            ? 'INCAP esta pendiente de verificacion documental (PDF escaneado). Seleccione IOM o FAO/OMS.'
+            : `Sin referencia disponible para etapa "${etapa}" / sexo en el estandar seleccionado.`}
+        </div>
+      ) : (
+        <React.Fragment>
+          <div style={{ overflowX:'auto' }}>
+            <table style={{ width:'100%', borderCollapse:'collapse', fontSize:'.85rem' }}>
+              <thead>
+                <tr style={{ textAlign:'left', color:'#475569', borderBottom:'2px solid #e2e8f0' }}>
+                  <th style={{ padding:'6px 8px' }}>Nutriente</th>
+                  <th style={{ padding:'6px 8px' }}>Consumo</th>
+                  <th style={{ padding:'6px 8px' }}>Referencia</th>
+                  <th style={{ padding:'6px 8px' }}>%</th>
+                  <th style={{ padding:'6px 8px' }}>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ev.filas.map((f, i) => (
+                  <tr key={i} style={{ borderBottom:'1px solid #eef2f7' }}>
+                    <td style={{ padding:'6px 8px', fontWeight:600 }}>
+                      {f.nutriente}
+                      {f.tipo==='limite' && <span style={{ color:'#c8102e', fontSize:'.72rem' }}> (limite)</span>}
+                      {f.tipo==='rango' && <span style={{ color:'#64748b', fontSize:'.72rem' }}> (rango)</span>}
+                      {f.tipo==='referencia' && <span style={{ color:'#64748b', fontSize:'.72rem' }}> (ref.)</span>}
+                    </td>
+                    <td style={{ padding:'6px 8px' }}>{f.consumido} {f.unidad}</td>
+                    <td style={{ padding:'6px 8px', color:'#475569' }}>
+                      {f.referencia}{f.tipo==='minimo'||f.tipo==='meta'||f.tipo==='limite' ? ' '+f.unidad : ''}
+                      {f.biodisp && <div style={{ fontSize:'.7rem', color:'#94a3b8' }}>biodisp {f.biodisp}</div>}
+                    </td>
+                    <td style={{ padding:'6px 8px' }}>{f.pct != null ? f.pct+'%' : '—'}</td>
+                    <td style={{ padding:'6px 8px' }}>
+                      <span style={{ display:'inline-block', padding:'2px 8px', borderRadius:20,
+                        fontSize:'.72rem', fontWeight:700,
+                        color: SEM_COLOR[f.semaforo], background: SEM_BG[f.semaforo] }}>
+                        {f.semaforo==='verde'?'Cubre':f.semaforo==='ambar'?'Cerca':f.semaforo==='rojo'?(f.tipo==='limite'?'Excede':'Bajo'):'—'}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div style={{ marginTop:8, fontSize:'.74rem', color:'#94a3b8' }}>
+            Fuente: <strong>{stdMeta.nombre || estandar}</strong>
+            {stdMeta.anio ? ` (${stdMeta.anio})` : ''}.
+            {stdMeta.restricciones ? ' Restriccion: '+stdMeta.restricciones : ''}
+          </div>
+        </React.Fragment>
+      )}
     </div>
   );
 };

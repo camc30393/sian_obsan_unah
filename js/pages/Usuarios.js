@@ -1,5 +1,5 @@
 /**
- * SIDH - Usuarios
+ * SIAN - Usuarios
  * Gestión de cuentas y permisos del sistema. En el prototipo se generan
  * usuarios sintéticos a partir de los estudiantes reales del C24 más
  * algunos perfiles institucionales (docentes, investigadores, admin).

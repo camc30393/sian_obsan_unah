@@ -1,5 +1,5 @@
 /**
- * SIDH - Encuestados v1.1
+ * SIAN - Encuestados v1.1
  * Cambios:
  *   - Expediente = ID interno único de BD
  *   - DNI como columna ANTES del nombre (formato 0801-1994-02095)
@@ -9,6 +9,7 @@
  *   - Click en fila abre modal de perfil completo
  */
 const Encuestados = ({ user }) => {
+  const [consentNuevo, setConsentNuevo] = React.useState(false);
   const t = (k) => I18n.t(k);
   const all = DataStore.get('encuestados') || [];
   const estudiantes = DataStore.get('estudiantes') || [];
@@ -147,14 +148,15 @@ const Encuestados = ({ user }) => {
         footer={
           <>
             <button className="btn btn-secondary" onClick={() => setShowNuevo(false)}>Cancelar</button>
-            <button className="btn btn-primary" onClick={() => {
+            <button className="btn btn-primary" disabled={!consentNuevo} title={!consentNuevo ? 'Requiere consentimiento informado' : ''} onClick={() => {
+              if (!consentNuevo) { alert('No se puede registrar sin consentimiento informado activo.'); return; }
               alert('(Prototipo) Encuestado registrado.\n\nEn producción, se guardaría en BD y se navegaría al perfil del nuevo registro.');
-              setShowNuevo(false);
+              setShowNuevo(false); setConsentNuevo(false);
             }}>💾 Guardar encuestado</button>
           </>
         }
       >
-        <FormularioEncuestado />
+        <FormularioEncuestado consent={consentNuevo} setConsent={setConsentNuevo} />
       </Modal>
 
       {/* Modal: perfil completo */}
@@ -235,7 +237,9 @@ const Encuestados = ({ user }) => {
 // ===========================================================
 // Formulario completo de encuestado (4 secciones)
 // ===========================================================
-const FormularioEncuestado = ({ initial = {} }) => {
+const FormularioEncuestado = ({ initial = {}, consent, setConsent }) => {
+  const [dni, setDni] = React.useState(initial.dni || '');
+  const dniValido = !dni || (window.Helpers && Helpers.validateDNI(dni));
   const [section, setSection] = React.useState(0);
   const sections = [
     { id: 0, label: '1. Generales', icon: '👤' },
@@ -246,6 +250,16 @@ const FormularioEncuestado = ({ initial = {} }) => {
 
   return (
     <div>
+      {setConsent && (
+        <div style={{ background: consent ? '#e7f6ec' : '#fde8eb', border: `1px solid ${consent ? '#9ed8b4' : '#f0a9b4'}`,
+          borderRadius: 8, padding: '10px 12px', marginBottom: 12, fontSize: '0.85rem' }}>
+          <label className="flex items-center gap-2" style={{ cursor:'pointer', fontWeight:600 }}>
+            <input type="checkbox" checked={!!consent} onChange={(e) => setConsent(e.target.checked)} />
+            Declaro que se obtuvo el <strong>consentimiento informado</strong> de la persona antes de capturar sus datos.
+          </label>
+          {!consent && <div className="small" style={{ color:'#c8102e', marginTop:4 }}>Sin consentimiento activo no se puede guardar el registro (requisito del comité de ética).</div>}
+        </div>
+      )}
       {/* Tabs */}
       <div style={{ display: 'flex', gap: 4, marginBottom: 16, borderBottom: '2px solid var(--gray-200)', flexWrap: 'wrap' }}>
         {sections.map(s => (
@@ -264,7 +278,10 @@ const FormularioEncuestado = ({ initial = {} }) => {
       {section === 0 && (
         <div className="form-grid">
           <FormField label="DNI" hint="Formato: 0801-1994-02095" span={6}>
-            <input className="input" placeholder="0801-1994-02095" defaultValue={initial.dni} />
+            <input className="input" placeholder="0801-1994-02095" value={dni}
+              onChange={(e) => setDni(e.target.value)}
+              style={{ borderColor: dniValido ? undefined : 'var(--unah-red-500)' }} />
+            {!dniValido && <div className="small" style={{ color:'var(--unah-red-500)', marginTop:2 }}>DNI inválido (formato 0000-0000-00000)</div>}
           </FormField>
           <FormField label="Documento alternativo (extranjeros)" span={6}>
             <input className="input" placeholder="Pasaporte / Carné de residencia" />

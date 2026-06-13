@@ -1,5 +1,5 @@
 /**
- * SIDH - App
+ * SIAN - App
  * Componente raíz que orquesta:
  *   - Carga inicial de i18n y datos
  *   - Estado de autenticación
@@ -15,7 +15,7 @@ const App = () => {
   // Cargar datos e i18n una sola vez al montar
   React.useEffect(() => {
     (async () => {
-      const lang = localStorage.getItem('sidh_lang') || 'es';
+      const lang = localStorage.getItem('sian_lang') || 'es';
       await I18n.load(lang);
       await DataStore.loadAll();
       setReady(true);
@@ -42,7 +42,7 @@ const App = () => {
         background: 'var(--unah-blue-900)', color: 'white'
       }}>
         <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--unah-yellow-500)' }}>SIDH</div>
+          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--unah-yellow-500)' }}>SIAN</div>
           <div style={{ marginTop: 12, opacity: 0.7 }}>Cargando datos...</div>
         </div>
       </div>

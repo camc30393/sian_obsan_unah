@@ -1,5 +1,5 @@
 /**
- * SIDH - Socioeconomico
+ * SIAN - Socioeconomico
  * Formulario multi-paso para captura de datos socioeconómicos
  * y consentimiento informado del encuestado.
  *

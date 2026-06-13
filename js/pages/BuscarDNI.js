@@ -1,5 +1,5 @@
 /**
- * SIDH - BuscarDNI
+ * SIAN - BuscarDNI
  * Búsqueda longitudinal de personas por DNI hondureño (13 dígitos)
  * o por identificador alternativo para extranjeros.
  *

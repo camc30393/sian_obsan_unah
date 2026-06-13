@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "SIDH",
+    "name": "SIAN",
     "fullName": "Honduran Diet Information System",
     "subtitle": "OBSAN · School of Nutrition · UNAH",
     "demoBanner": "NON-FUNCTIONAL PROTOTYPE"
@@ -40,7 +40,7 @@
     "role": "Sign in as",
     "role_estudiante": "Student PIS/SSC",
     "role_docente": "Teacher / Coordinator",
-    "role_investigador": "OBSAN Researcher",
+    "role_investigador": "Researcher",
     "role_admin": "Administrator",
     "version": "Version 0.1 · Prototype"
   },
@@ -434,7 +434,7 @@
     "roles": {
       "estudiante": "PIS/SSC Student",
       "docente": "Teacher / Coordinator",
-      "investigador": "OBSAN Researcher",
+      "investigador": "Researcher",
       "admin": "Administrator"
     },
     "actions": {

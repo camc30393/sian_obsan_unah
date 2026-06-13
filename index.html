@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SIDH - Sistema de Información de la Dieta Hondureña. Prototipo no funcional para propuesta DICITH UNAH." />
+  <meta name="description" content="SIAN - Sistema de Información Alimentaria y Nutricional. Prototipo no funcional para propuesta DICITH UNAH." />
   <meta name="author" content="Christian Alexis Manzanares Cruz - ORCID 0009-0004-7419-0449" />
-  <title>SIDH · Sistema de Información de la Dieta Hondureña</title>
+  <title>SIAN · Sistema de Información Alimentaria y Nutricional</title>
 
   <!-- ========================================================
        DEPENDENCIAS EXTERNAS (CDN) - sin compilación
@@ -23,7 +23,7 @@
   <!-- Tailwind via CDN (no requiere build step) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tema visual del SIDH -->
+  <!-- Tema visual del SIAN -->
   <link rel="stylesheet" href="./assets/css/theme.css" />
 
   <!-- React 18 (development build para mejor diagnóstico en prototipo) -->
@@ -64,7 +64,7 @@
   <div id="root"></div>
 
   <!-- ========================================================
-       CARGA DE COMPONENTES SIDH (orden importa)
+       CARGA DE COMPONENTES SIAN (orden importa)
        Todos los archivos JSX se transforman en runtime con Babel.
        ======================================================== -->
 
@@ -73,6 +73,8 @@
   <script src="./js/utils/store.js"></script>
   <script src="./js/utils/router.js"></script>
   <script src="./js/utils/helpers.js"></script>
+  <script src="./js/utils/nutricion.js"></script>
+  <script src="./js/utils/antropometria.js"></script>
 
   <!-- 2. Componentes (necesitan JSX → type=text/babel) -->
   <script type="text/babel" src="./js/components/Sidebar.js"></script>

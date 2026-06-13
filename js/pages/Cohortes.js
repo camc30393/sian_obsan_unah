@@ -1,5 +1,5 @@
 /**
- * SIDH - Cohortes (Proyectos)
+ * SIAN - Cohortes (Proyectos)
  * Gestión de proyectos/cohortes paralelos. Permite cambiar entre cohortes
  * activas y crear nuevas. Cada cohorte tiene su propia muestra y reportes.
  */
@@ -15,10 +15,10 @@ const Cohortes = () => {
       descripcion: 'Estudio prototipo OBSAN sobre alimentación y NSE en adultos hondureños 19-59 años.'
     },
     {
-      id: 'SIDH-2026', codigo: 'SIDH-26', nombre: 'SIDH 2026 - Curso de vida completo',
+      id: 'SIAN-2026', codigo: 'SIAN-26', nombre: 'SIAN 2026 - Curso de vida completo',
       periodo: '2026-2027', muestraTarget: 8000, muestraActual: 350,
       responsable: 'Christian Manzanares', estado: 'active', activa: true,
-      descripcion: 'Primer levantamiento del SIDH con cobertura de todas las etapas del curso de vida (lactantes a adultos mayores).'
+      descripcion: 'Primer levantamiento del SIAN con cobertura de todas las etapas del curso de vida (lactantes a adultos mayores).'
     },
     {
       id: 'EMB-2026', codigo: 'EMB-26', nombre: 'Embarazadas y lactantes 2026',
@@ -49,7 +49,7 @@ const Cohortes = () => {
     if (c.estado === 'closed') {
       alert('(Prototipo) Esta cohorte está cerrada. Solo se puede consultar, no modificar.');
     } else {
-      alert(`(Prototipo) Cambiando a cohorte: ${c.nombre}\n\nA partir de este momento, todas las pantallas del SIDH mostrarán únicamente los datos de esta cohorte. La selección queda registrada en auditoría.`);
+      alert(`(Prototipo) Cambiando a cohorte: ${c.nombre}\n\nA partir de este momento, todas las pantallas del SIAN mostrarán únicamente los datos de esta cohorte. La selección queda registrada en auditoría.`);
     }
   };
 

@@ -1,5 +1,5 @@
 /**
- * SIDH - Footer
+ * SIAN - Footer
  * Footer global con autoría Christian Manzanares + ORCID, presente en todas las pantallas.
  * Versión sesión 7: presentación pulida para entregable final.
  */

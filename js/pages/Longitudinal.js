@@ -1,5 +1,5 @@
 /**
- * SIDH - Longitudinal
+ * SIAN - Longitudinal
  * Historial dietético longitudinal de una persona a lo largo del tiempo.
  *
  * Para el prototipo no funcional, generamos series sintéticas de R24 a partir

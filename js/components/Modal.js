@@ -1,5 +1,5 @@
 /**
- * SIDH - Modal genérico reutilizable
+ * SIAN - Modal genérico reutilizable
  * Props: open, onClose, title, subtitle, size ('sm'|'md'|'lg'|'xl'),
  *        children, footer (componente o array de botones)
  */

@@ -1,5 +1,5 @@
 /**
- * SIDH - DataStore
+ * SIAN - DataStore
  * Carga todos los archivos JSON de /data una sola vez al inicio
  * y los expone globalmente. Evita múltiples requests por componente.
  */
@@ -12,7 +12,7 @@ window.DataStore = {
     const files = [
       'estudiantes', 'tiempos_comida', 'porciones', 'grupos_alimentos',
       'alimentos_incap', 'encuestados', 'recordatorios', 'recetas_hondurenas',
-      'geografia_honduras', 'agregados'
+      'geografia_honduras', 'agregados', 'requerimientos', 'recetas_nutrientes'
     ];
     const promises = files.map(f =>
       fetch(`./data/${f}.json`).then(r => r.json()).then(d => [f, d])

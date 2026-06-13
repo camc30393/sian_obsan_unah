@@ -1,5 +1,5 @@
 /**
- * SIDH - Auditoría
+ * SIAN - Auditoría
  * Registro detallado de todas las operaciones del sistema con filtros
  * por usuario, módulo, acción, fecha y resultado.
  *

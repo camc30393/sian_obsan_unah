@@ -1,5 +1,5 @@
 /**
- * SIDH - Layout v1.1
+ * SIAN - Layout v1.1
  * Composición principal: sidebar + topbar + contenido + footer.
  * Maneja estado de drawer móvil del sidebar.
  */

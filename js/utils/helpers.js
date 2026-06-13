@@ -1,5 +1,5 @@
 /**
- * SIDH - Helpers
+ * SIAN - Helpers
  * Utilidades de formateo y manipulación de datos.
  */
 window.Helpers = {

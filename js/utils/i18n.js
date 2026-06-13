@@ -1,11 +1,11 @@
 /**
- * SIDH - i18n
+ * SIAN - i18n
  * Cargador de traducciones simple. Carga locales/{idioma}.json
  * y expone una función t(key) que navega claves anidadas con punto.
  *
  * Uso:
  *   await I18n.load('es');
- *   I18n.t('app.name')         // 'SIDH'
+ *   I18n.t('app.name')         // 'SIAN'
  *   I18n.t('nav.dashboard')    // 'Tablero analítico'
  */
 window.I18n = {
@@ -17,7 +17,7 @@ window.I18n = {
       const res = await fetch(`./locales/${lang}.json`);
       this.data = await res.json();
       this.current = lang;
-      localStorage.setItem('sidh_lang', lang);
+      localStorage.setItem('sian_lang', lang);
       return true;
     } catch (e) {
       console.error('I18n load failed:', e);

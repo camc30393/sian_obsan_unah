@@ -1,5 +1,5 @@
 /**
- * SIDH - Alimentos (Catálogo INCAP)
+ * SIAN - Alimentos (Catálogo INCAP)
  * Buscador inteligente sobre 2,469 alimentos del catálogo INCAP con
  * composición nutricional completa (38+ nutrientes por 100g).
  *

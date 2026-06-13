@@ -1,5 +1,5 @@
 /**
- * SIDH - ChartCard
+ * SIAN - ChartCard
  * Wrapper estándar para tarjetas con visualización: título, descripción
  * y tooltip de ayuda. Mantiene consistencia visual en todo el dashboard.
  */

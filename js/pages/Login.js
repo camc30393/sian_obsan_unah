@@ -1,5 +1,5 @@
 /**
- * SIDH - Login
+ * SIAN - Login
  * Pantalla de autenticación con selección de rol (4 perfiles).
  * En el prototipo no funcional, cualquier credencial permite ingresar.
  */

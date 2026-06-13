@@ -1,5 +1,5 @@
 /**
- * SIDH - Catalogos
+ * SIAN - Catalogos
  * Vista de administración de catálogos del sistema. Cada tarjeta muestra
  * el catálogo, número de registros y acciones disponibles (ver, agregar,
  * importar, exportar). Las acciones reales abren los módulos correspondientes

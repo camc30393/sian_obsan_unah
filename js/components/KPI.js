@@ -1,5 +1,5 @@
 /**
- * SIDH - KPI
+ * SIAN - KPI
  * Tarjeta de indicador clave con etiqueta, valor, ícono y tooltip explicativo.
  * Cada KPI lleva una nota informativa accesible vía hover (cumple requisito
  * de explicar significado de cada indicador).

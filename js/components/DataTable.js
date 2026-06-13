@@ -1,5 +1,5 @@
 /**
- * SIDH - DataTable
+ * SIAN - DataTable
  * Tabla de datos reutilizable con:
  *   - Paginación
  *   - Búsqueda global

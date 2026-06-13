@@ -1,5 +1,5 @@
 /**
- * SIDH - MapaGeografico
+ * SIAN - MapaGeografico
  * Visualización geoespacial de la cobertura y los indicadores nutricionales.
  *
  * Usa Leaflet (cargado vía CDN en index.html) + OpenStreetMap como base.

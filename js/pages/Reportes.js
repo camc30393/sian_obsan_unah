@@ -1,5 +1,5 @@
 /**
- * SIDH - Reportes
+ * SIAN - Reportes
  * Galería de reportes pre-armados para distintas audiencias.
  * Cada reporte es una "tarjeta" con descripción, parámetros y formatos.
  *
@@ -72,6 +72,7 @@ const Reportes = () => {
 
   return (
     <div className="fade-in">
+      <AdecuacionPoblacional />
       {/* Galería de reportes */}
       <div style={{
         display: 'grid',
@@ -133,6 +134,127 @@ const Reportes = () => {
           <button className="btn btn-primary">+ Nueva programación</button>
         </div>
       </div>
+    </div>
+  );
+};
+
+
+// ====================================================================
+// Resumen poblacional de adecuacion de nutrientes por etapa de vida
+// PRELIMINAR: 1 R24/persona; no es prevalencia de ingesta usual.
+// Marco: docs/marco-teorico-evaluacion-adecuacion-nutricional.md
+// ====================================================================
+const PSEM = { verde:'#1f9d55', ambar:'#d9930a', rojo:'#c8102e' };
+const PBG  = { verde:'#e7f6ec', ambar:'#fdf3e0', rojo:'#fde8eb' };
+const ETAPAS_POB = ['lactante','preescolar','escolar','adolescente','adulto','adulto_mayor','embarazo','lactancia'];
+
+const AdecuacionPoblacional = () => {
+  const [estandar, setEstandar] = React.useState('iom');
+  const [etapaSel, setEtapaSel] = React.useState('adulto');
+
+  // Agrupar recordatorios por persona (una sola vez)
+  const grupos = React.useMemo(() => {
+    const encs = DataStore.get('encuestados') || [];
+    const recs = DataStore.get('recordatorios') || [];
+    const encById = {}; encs.forEach(e => { encById[e.id_estudiante_entrevistado] = e; });
+    const byPersona = {};
+    recs.forEach(r => {
+      const k = r.id_estudiante_entrevistado;
+      (byPersona[k] = byPersona[k] || []).push(r);
+    });
+    const out = [];
+    Object.keys(byPersona).forEach(k => {
+      const e = encById[k]; if (!e) return;
+      out.push({ encuestado: e, records: byPersona[k] });
+    });
+    return out;
+  }, []);
+
+  const gruposEtapa = React.useMemo(
+    () => grupos.filter(g => Nutricion.mapEtapa(g.encuestado) === etapaSel),
+    [grupos, etapaSel]
+  );
+  const resumen = React.useMemo(
+    () => Nutricion.resumenPoblacional(gruposEtapa, { estandar }),
+    [gruposEtapa, estandar]
+  );
+
+  const filas = Object.keys(resumen.acc).map(n => {
+    const a = resumen.acc[n], pctOk = a.n ? Math.round(a.verde / a.n * 100) : 0;
+    return { nutriente:n, ...a, pctOk };
+  });
+
+  return (
+    <div className="card" style={{ marginBottom: 20, border:'2px solid var(--unah-blue-800)' }}>
+      <div className="flex items-center justify-between" style={{ flexWrap:'wrap', gap:8 }}>
+        <div className="h3" style={{ margin:0 }}>🗺️ Adecuacion poblacional por etapa de vida</div>
+        <div className="flex gap-1">
+          {[['iom','IOM'],['fao_oms','FAO/OMS'],['incap','INCAP']].map(([id,l]) => (
+            <button key={id} onClick={() => setEstandar(id)}
+              style={{ padding:'4px 10px', borderRadius:8, fontSize:'.8rem', fontWeight:600,
+                border:`1.5px solid ${estandar===id?'var(--unah-blue-800)':'#cbd5e1'}`,
+                background: estandar===id?'#eef3fb':'white',
+                color: estandar===id?'var(--unah-blue-800)':'#475569', cursor:'pointer' }}>{l}</button>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex gap-1" style={{ flexWrap:'wrap', margin:'10px 0' }}>
+        {ETAPAS_POB.map(e => (
+          <button key={e} onClick={() => setEtapaSel(e)}
+            style={{ padding:'3px 9px', borderRadius:20, fontSize:'.76rem', fontWeight:600,
+              border:`1px solid ${etapaSel===e?'var(--unah-blue-800)':'#cbd5e1'}`,
+              background: etapaSel===e?'var(--unah-blue-800)':'white',
+              color: etapaSel===e?'white':'#475569', cursor:'pointer' }}>{e}</button>
+        ))}
+      </div>
+
+      <div style={{ background:'#fff8e6', border:'1px solid #f0d48a', borderRadius:8,
+        padding:'8px 12px', marginBottom:10, fontSize:'.8rem', color:'#7a5b12' }}>
+        ⚠️ <strong>Estimacion preliminar</strong> — basada en 1 R24 por persona. La prevalencia
+        valida de inadecuacion requiere ingesta usual (≥2 R24) y metodo del punto de corte de la EAR.
+        Personas evaluadas en esta etapa: <strong>{resumen.evaluados}</strong>
+        {resumen.excluidos ? ` · excluidas: ${resumen.excluidos}` : ''}.
+      </div>
+
+      {filas.length === 0 ? (
+        <div style={{ background:'#eef2f7', borderRadius:8, padding:12, fontSize:'.85rem', color:'#475569' }}>
+          {estandar==='incap'
+            ? 'INCAP pendiente de verificacion documental. Use IOM o FAO/OMS.'
+            : 'Sin personas con recordatorios en esta etapa (las etapas no-adultas pueden no tener registros reales en el prototipo).'}
+        </div>
+      ) : (
+        <div style={{ overflowX:'auto' }}>
+          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:'.85rem' }}>
+            <thead>
+              <tr style={{ textAlign:'left', color:'#475569', borderBottom:'2px solid #e2e8f0' }}>
+                <th style={{ padding:'6px 8px' }}>Nutriente</th>
+                <th style={{ padding:'6px 8px' }}>% cubre</th>
+                <th style={{ padding:'6px 8px', width:'45%' }}>Distribucion</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filas.map((f,i) => (
+                <tr key={i} style={{ borderBottom:'1px solid #eef2f7' }}>
+                  <td style={{ padding:'6px 8px', fontWeight:600 }}>
+                    {f.nutriente}{f.tipo==='limite' && <span style={{ color:'#c8102e', fontSize:'.72rem' }}> (limite)</span>}
+                  </td>
+                  <td style={{ padding:'6px 8px', fontWeight:700,
+                    color: f.pctOk>=70?PSEM.verde:(f.pctOk>=40?PSEM.ambar:PSEM.rojo) }}>{f.pctOk}%</td>
+                  <td style={{ padding:'6px 8px' }}>
+                    <div style={{ display:'flex', height:14, borderRadius:7, overflow:'hidden', border:'1px solid #e2e8f0' }}>
+                      {['verde','ambar','rojo'].map(k => f[k] ? (
+                        <div key={k} title={`${k}: ${f[k]}`}
+                          style={{ width:`${f[k]/f.n*100}%`, background:PSEM[k] }} />
+                      ) : null)}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
