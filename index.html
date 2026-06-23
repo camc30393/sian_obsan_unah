@@ -8,55 +8,51 @@
   <title>SIAN · Sistema de Información Alimentaria y Nutricional</title>
 
   <!-- ========================================================
-       DEPENDENCIAS EXTERNAS (CDN) - sin compilación
+       DEPENDENCIAS LOCALES (vendorizadas) — sin CDN, sin build, offline.
+       Todas las librerías viven en ./assets/vendor/ con versión fija.
+       Motivo: evitar que un CDN sin pin (p. ej. el salto de Babel 7→8) vuelva
+       a romper el prototipo. Ver assets/vendor/VENDOR.md.
        ======================================================== -->
 
-  <!-- Tipografía Inter (similar a Helvetica Neue del manual UNAH) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tipografía Inter (auto-hospedada, fuente variable, reemplaza Google Fonts) -->
+  <link rel="stylesheet" href="./assets/vendor/fonts/inter.css" />
 
   <!-- Leaflet CSS para mapas (pre-carga, se usará en sesión 5) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="./assets/vendor/leaflet/leaflet.css" />
 
-  <!-- Tailwind via CDN (no requiere build step) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind precompilado a CSS estático (incluye preflight + paleta unah).
+       Generado con tailwindcss@3.4.16 escaneando index.html + js/**/*.js.
+       Si se agregan NUEVAS utilidades Tailwind, recompilar (ver VENDOR.md). -->
+  <link rel="stylesheet" href="./assets/vendor/tailwind/tailwind.css" />
 
   <!-- Tema visual del SIAN -->
   <link rel="stylesheet" href="./assets/css/theme.css" />
 
   <!-- React 18 (development build para mejor diagnóstico en prototipo) -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="./assets/vendor/react/react.development.js"></script>
+  <script src="./assets/vendor/react-dom/react-dom.development.js"></script>
 
-  <!-- Babel standalone para transformar JSX en el navegador -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Babel standalone 7.26.4 (runtime clásico → React.createElement).
+       Fijado localmente: Babel 8 cambió preset-react al "automatic runtime"
+       y emitía `import { jsx } from "react/jsx-runtime"`, lo que rompía los
+       <script type="text/babel"> con "Cannot use import statement outside a module". -->
+  <script src="./assets/vendor/babel/babel.min.js"></script>
 
-  <!-- Recharts para visualizaciones de datos -->
-  <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
-  <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
-
-  <!-- Leaflet JS (para mapas en sesión 5) -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-  <!-- Configuración de Tailwind (extensión paleta UNAH) -->
+  <!-- Red de seguridad: fuerza runtime clásico aunque se cambie la versión de Babel. -->
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            unah: {
-              blue:   '#002F87',
-              yellow: '#F4B71A',
-              red:    '#C8102E',
-            }
-          }
-        }
-      }
+    if (window.Babel && Babel.availablePresets && Babel.availablePresets.react) {
+      Babel.registerPreset('react', {
+        presets: [[Babel.availablePresets.react, { runtime: 'classic' }]]
+      });
     }
   </script>
+
+  <!-- Recharts para visualizaciones de datos -->
+  <script src="./assets/vendor/prop-types/prop-types.min.js"></script>
+  <script src="./assets/vendor/recharts/Recharts.js"></script>
+
+  <!-- Leaflet JS (para mapas en sesión 5) -->
+  <script src="./assets/vendor/leaflet/leaflet.js"></script>
 </head>
 
 <body>

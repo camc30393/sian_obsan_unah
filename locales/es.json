@@ -2,7 +2,7 @@
   "app": {
     "name": "SIAN",
     "fullName": "Sistema de Información Alimentaria y Nutricional",
-    "subtitle": "OBSAN · Carrera de Nutrición · UNAH",
+    "subtitle": "Carrera de Nutrición · OBSAN · UNAH",
     "demoBanner": "PROTOTIPO NO FUNCIONAL"
   },
   "nav": {
@@ -572,8 +572,8 @@
     "Sin definir": "Sin definir"
   },
   "footer": {
-    "author": "Autor",
-    "rights": "© 2026 OBSAN-UNAH. Todos los derechos reservados.",
+    "author": "Autores",
+    "rights": "© 2026 CARRERA NUTRICIÓN · OBSAN · UNAH. Todos los derechos reservados.",
     "session": "Sesión activa"
   }
 }

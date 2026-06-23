@@ -2,7 +2,7 @@
   "app": {
     "name": "SIAN",
     "fullName": "Honduran Diet Information System",
-    "subtitle": "OBSAN · School of Nutrition · UNAH",
+    "subtitle": "School of Nutrition · OBSAN · UNAH",
     "demoBanner": "NON-FUNCTIONAL PROTOTYPE"
   },
   "nav": {
@@ -572,8 +572,8 @@
     "Sin definir": "Undefined"
   },
   "footer": {
-    "author": "Author",
-    "rights": "© 2026 OBSAN-UNAH. All rights reserved.",
+    "author": "Authors",
+    "rights": "© 2026 SCHOOL OF NUTRITION · OBSAN · UNAH. All rights reserved.",
     "session": "Active session"
   }
 }
