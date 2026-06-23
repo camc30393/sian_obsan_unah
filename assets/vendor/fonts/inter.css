@@ -1,9 +1,0 @@
-/* Inter variable (latín) auto-hospedado — reemplaza Google Fonts. Pesos 100–900.
-   Se registra como 'Inter' para que assets/css/theme.css (--font-sans: 'Inter'...) lo use sin cambios. */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 100 900;
-  src: url('./files/inter-latin-wght-normal.woff2') format('woff2-variations');
-}
