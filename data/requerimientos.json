@@ -1,0 +1,1740 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "generado": "2026-06-12",
+    "sistema": "SIAN",
+    "nota_general": "Referencias para poblacion sana sin condicion especial. Un R24 unico es indicativo, no diagnostico de ingesta usual.",
+    "tipos": {
+      "minimo": "alcanzar o superar",
+      "rango": "mantenerse dentro del % de energia (AMDR)",
+      "limite": "no superar",
+      "meta": "objetivo (AI)",
+      "referencia": "valor de contexto, no semaforo de adecuacion"
+    },
+    "estandares": {
+      "iom": {
+        "nombre": "IOM Dietary Reference Intakes (DRI)",
+        "anio": 2005,
+        "fuente_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/dietary-reference-intakes/tables.html",
+        "ventajas": "Tablas completas y granulares por etapa y sexo.",
+        "restricciones": "Poblacion norteamericana; hierro asumido ~18% biodisponibilidad, no representativo de Honduras."
+      },
+      "fao_oms": {
+        "nombre": "FAO/OMS/UNU",
+        "anio": 2004,
+        "fuente_url": "https://www.who.int/publications/i/item/9241546123",
+        "ventajas": "Ajusta hierro/zinc por biodisponibilidad de la dieta; marco FAO/PMA. Hierro cargado al 10%.",
+        "restricciones": "Cobertura ampliada: proteina, hierro(10%), zinc, calcio, vit A (RE), vit C, folato, B12. Energia y fibra usan IOM/EER.",
+        "biodisponibilidad_hierro": "10%"
+      },
+      "incap": {
+        "nombre": "INCAP Recomendaciones Dieteticas Diarias",
+        "estado": "pendiente_verificacion_documental",
+        "motivo": "Edicion disponible es PDF escaneado sin capa de texto (bvs.hn). No se puebla con valores no verificables.",
+        "fuente_url": "https://www.bvs.hn/Honduras/Nutricion/Recomendaciones.Dieteticas.Diarias.pdf"
+      }
+    },
+    "mapeo_etapas_bandas_iom": {
+      "lactante": "7-12 mo",
+      "preescolar": "1-3 y",
+      "escolar": "4-8 y",
+      "adolescente": "14-18 y",
+      "adulto": "19-50 y",
+      "adulto_mayor": "51-70 / >70 y",
+      "embarazo": "Pregnancy 19-50",
+      "lactancia": "Lactation 19-50"
+    }
+  },
+  "estandares": {
+    "iom": {
+      "lactante": {
+        "M": {
+          "energia_kcal": {
+            "valor": 700,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 1.2,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "calcio_mg": {
+            "valor": 260,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 3,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 50,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 80,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.5,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 700,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 1.2,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "calcio_mg": {
+            "valor": 260,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 3,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 50,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 80,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.5,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          }
+        }
+      },
+      "preescolar": {
+        "M": {
+          "energia_kcal": {
+            "valor": 1300,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 1.05,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 30,
+            "max_pct_energia": 40,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 19,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 700,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 7,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 3,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 300,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 15,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 150,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.9,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 1200,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 1300,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 1.05,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 30,
+            "max_pct_energia": 40,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 19,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 700,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 7,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 3,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 300,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 15,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 150,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.9,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 1200,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      },
+      "escolar": {
+        "M": {
+          "energia_kcal": {
+            "valor": 1800,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.95,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 25,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 25,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 10,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 5,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 25,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 200,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 1.2,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 1500,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 1700,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.95,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 25,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 25,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 10,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 5,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 25,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 200,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 1.2,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 1500,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      },
+      "adolescente": {
+        "M": {
+          "energia_kcal": {
+            "valor": 2800,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.85,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 25,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 38,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 900,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 75,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 2200,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.85,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 25,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 26,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 15,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 9,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 700,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 65,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      },
+      "adulto": {
+        "M": {
+          "energia_kcal": {
+            "valor": 2600,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.8,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 38,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 8,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 900,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 90,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 2000,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.8,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 25,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 18,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 8,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 700,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 75,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      },
+      "adulto_mayor": {
+        "M": {
+          "energia_kcal": {
+            "valor": 2200,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.8,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 30,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 8,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 900,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 90,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 1800,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 0.8,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 21,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1200,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 8,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 8,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 700,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 75,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      },
+      "embarazo": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 1.1,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 2200,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 1.1,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 28,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 27,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 11,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 770,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 85,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.6,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      },
+      "lactancia": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 1.3,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          }
+        },
+        "F": {
+          "energia_kcal": {
+            "valor": 2300,
+            "tipo": "referencia",
+            "fuente": "IOM-EER aprox"
+          },
+          "proteina_g_kg": {
+            "valor": 1.3,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "IOM-DRI"
+          },
+          "grasa": {
+            "min_pct_energia": 20,
+            "max_pct_energia": 35,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "carbohidratos": {
+            "min_pct_energia": 45,
+            "max_pct_energia": 65,
+            "tipo": "rango",
+            "fuente": "IOM-AMDR"
+          },
+          "fibra_g": {
+            "valor": 29,
+            "tipo": "meta",
+            "fuente": "IOM-AI"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "hierro_mg": {
+            "valor": 9,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI",
+            "biodisp": "~18% (dieta tipo norteamericana)"
+          },
+          "zinc_mg": {
+            "valor": 12,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_a_mcg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_c_mg": {
+            "valor": 120,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "folato_mcg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.8,
+            "tipo": "minimo",
+            "fuente": "IOM-DRI"
+          },
+          "sodio_mg": {
+            "valor": 2300,
+            "tipo": "limite",
+            "fuente": "IOM-CDRR"
+          }
+        }
+      }
+    },
+    "fao_oms": {
+      "lactante": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 1.31,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "calcio_mg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 30,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 80,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.7,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 1.31,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "calcio_mg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 30,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 80,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.7,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "preescolar": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 1.05,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 3.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 4.1,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 30,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 160,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 1.05,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 3.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 4.1,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 30,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 160,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 0.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "escolar": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 0.92,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 5.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 5.6,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 450,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 35,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 300,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 1.2,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 0.92,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 5.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 5.6,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 450,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 35,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 300,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 1.2,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "adolescente": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 0.9,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 12.5,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 8.6,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 40,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 0.9,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 21.8,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 7.2,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 40,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "adulto": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 0.83,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 13.7,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 7.0,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 45,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 0.83,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 29.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 4.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 45,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "adulto_mayor": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 0.83,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 13.7,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 7.0,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 45,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 0.83,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 11.3,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 4.9,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1300,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 45,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 400,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.4,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "embarazo": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 1.1,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 1.1,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "zinc_mg": {
+            "valor": 10.0,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1200,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 800,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 55,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 600,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.6,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      },
+      "lactancia": {
+        "M": {
+          "proteina_g_kg": {
+            "valor": 1.3,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          }
+        },
+        "F": {
+          "proteina_g_kg": {
+            "valor": 1.3,
+            "tipo": "minimo",
+            "unidad": "g/kg/dia",
+            "fuente": "FAO/OMS/UNU 2007"
+          },
+          "hierro_mg": {
+            "valor": 15.0,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "10% (dieta mixta cereal/leguminosa)"
+          },
+          "zinc_mg": {
+            "valor": 9.5,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "biodisp": "moderada"
+          },
+          "calcio_mg": {
+            "valor": 1000,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_a_mcg": {
+            "valor": 850,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004",
+            "unidad_nota": "µg RE (FAO/OMS). El catálogo INCAP está en µg RAE; para retinol preformado RE=RAE, difieren solo en carotenoides provitamina A."
+          },
+          "vit_c_mg": {
+            "valor": 70,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "folato_mcg": {
+            "valor": 500,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          },
+          "vit_b12_mcg": {
+            "valor": 2.8,
+            "tipo": "minimo",
+            "fuente": "FAO/OMS 2004"
+          }
+        }
+      }
+    },
+    "incap": {
+      "lactante": {
+        "M": null,
+        "F": null
+      },
+      "preescolar": {
+        "M": null,
+        "F": null
+      },
+      "escolar": {
+        "M": null,
+        "F": null
+      },
+      "adolescente": {
+        "M": null,
+        "F": null
+      },
+      "adulto": {
+        "M": null,
+        "F": null
+      },
+      "adulto_mayor": {
+        "M": null,
+        "F": null
+      },
+      "embarazo": {
+        "M": null,
+        "F": null
+      },
+      "lactancia": {
+        "M": null,
+        "F": null
+      }
+    }
+  }
+}

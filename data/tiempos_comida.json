@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Desayuno"
+  },
+  {
+    "id": 2,
+    "nombre": "Merienda matutina"
+  },
+  {
+    "id": 3,
+    "nombre": "Almuerzo"
+  },
+  {
+    "id": 4,
+    "nombre": "Merienda tardía"
+  },
+  {
+    "id": 5,
+    "nombre": "Cena"
+  },
+  {
+    "id": 6,
+    "nombre": "Merienda noche"
+  }
+]

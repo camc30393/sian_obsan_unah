@@ -1,0 +1,52 @@
+[
+  {
+    "numero": "1.",
+    "nombre": "Cereales, raíces y tubérculos",
+    "contenido": "Maíz, arroz, trigo, sorgo mijo o cualquier otro alimento en grano o elaborado con ellos (pan, fideos productos elaborados con cereales) pastas, papas, ñame, yuca otros alimentos provenientes de raíces y tubérculos."
+  },
+  {
+    "numero": "2.",
+    "nombre": "Verduras ricas en vitamina A, verduras de hoja verde y otras verduras",
+    "contenido": "Calabacín, zapallo, zanahoria, calabaza, camote, pimientos rojo, verde, amarillo verduras de hoja verde oscuro incluidas las silvestres hoja de yuca, espinacas, lechuga, repollo, tomate, cebolla, berenjena, otras verduras disponibles localmente)"
+  },
+  {
+    "numero": "3.",
+    "nombre": "Frutas ricas en vitamina A y otras frutas",
+    "contenido": "Mango melón albaricoque papaya melocotón durazno juegos hechos al 100% con estas frutas más otras frutas ricas Vitamina A disponibles, banano, piña, melón, sandía, pitaya, cualquier otra fruta disponible."
+  },
+  {
+    "numero": "4.",
+    "nombre": "Carne de vísceras, carnes",
+    "contenido": "Hígado, riñón, corazón, otras vísceras o alimentos a base de sangre, carne de vacuno, cerdo, cordero, cabra, conejo, carne de caza, pollo, carne de otras aves."
+  },
+  {
+    "numero": "5.",
+    "nombre": "Huevos.",
+    "contenido": "Huevos de gallina pato o cualquier otro tipo de huevo"
+  },
+  {
+    "numero": "6.",
+    "nombre": "Pescado y mariscos.",
+    "contenido": "pescado o mariscos fresco o seco"
+  },
+  {
+    "numero": "7.",
+    "nombre": "Legumbres, nueces, semillas.",
+    "contenido": "Frijoles secos arvejas lentejas nueces semillas o alimentos elaborados con ellas (humus, mantequilla de maní)"
+  },
+  {
+    "numero": "8",
+    "nombre": "Leche y productos lácteos",
+    "contenido": "Leche, queso, yogur, cuajada, quesillo y otros productos lácteos."
+  },
+  {
+    "numero": "9",
+    "nombre": "Aceites y grasas.",
+    "contenido": "Aceites grasas o mantequilla añadida a los alimentos o usada para cocinarlos"
+  },
+  {
+    "numero": "10",
+    "nombre": "Dulces, especias y condimentos, bebidas",
+    "contenido": "Azúcar, miel, soda edulcorada, o jugos de edulcorados, productos dulces (chocolates, caramelos, galletas, tartas) especies (pimienta negra, sal) condimentos (salsa de soja, salsa picante) café, té, bebidas alcohólicas."
+  }
+]
