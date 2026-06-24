@@ -39,7 +39,7 @@
     "login": "Sign in",
     "role": "Sign in as",
     "role_estudiante": "Student PIS/SSC",
-    "role_docente": "Teacher / Coordinator",
+    "role_docente": "Thesis Coordinator Teacher",
     "role_investigador": "Researcher",
     "role_admin": "Administrator",
     "version": "Version 0.1 · Prototype"
@@ -433,7 +433,7 @@
     },
     "roles": {
       "estudiante": "PIS/SSC Student",
-      "docente": "Teacher / Coordinator",
+      "docente": "Thesis Coordinator Teacher",
       "investigador": "Researcher",
       "admin": "Administrator"
     },

@@ -39,7 +39,7 @@
     "login": "Ingresar",
     "role": "Acceder como",
     "role_estudiante": "Estudiante PIS/SSC",
-    "role_docente": "Docente / Coordinador",
+    "role_docente": "Docente coordinador de Tesina",
     "role_investigador": "Investigador",
     "role_admin": "Administrador",
     "version": "Versión 0.1 · Prototipo"
@@ -433,7 +433,7 @@
     },
     "roles": {
       "estudiante": "Estudiante PIS/SSC",
-      "docente": "Docente / Coordinador",
+      "docente": "Docente coordinador de Tesina",
       "investigador": "Investigador",
       "admin": "Administrador"
     },
